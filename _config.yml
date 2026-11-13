@@ -1,0 +1,33 @@
+# Jekyll-Konfiguration für melle.com.de (GitHub Pages baut die Seite daraus).
+# Statische Seiten (index.html, impressum.html …) haben keinen Vorspann und werden unverändert übernommen.
+# Neue Blogbeiträge: eine Datei _posts/JJJJ-MM-TT-titel.md mit Vorspann (siehe BLOG-ANLEITUNG.md).
+title: Melle Solutions
+description: KI-Begleitung für den Mittelstand – Mario Melle
+url: https://www.melle.com.de
+lang: de
+timezone: Europe/Berlin
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+feed:
+  path: posts/feed.xml
+  posts_limit: 25
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+exclude:
+  - server/
+  - iterationen/
+  - archiv/
+  - README.md
+  - INVENTAR.md
+  - CHECKLISTE-GITHUB.md
+  - BLOG-ANLEITUNG.md
+  - "*.command"
+  - "*.webloc"
+  - Gemfile
+  - Gemfile.lock
+  - _site/
+  - .jekyll-cache/

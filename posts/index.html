@@ -1,0 +1,33 @@
+---
+title: Blog & Aktuelles
+permalink: /posts/
+---
+<!doctype html>
+<html lang="de">
+<head>
+{% include kopfdaten.html %}
+  <title>Blog &amp; Aktuelles – Melle Solutions</title>
+  <meta name="description" content="Gedanken und Beiträge von Mario Melle zu KI, Geschäftsmodellen und Leadership.">
+</head>
+<body>
+{% include kopf.html %}
+<section>
+  <div class="wrap">
+    <span class="kicker">Blog &amp; Aktuelles</span>
+    <h1>Gedanken aus der Praxis</h1>
+    <p class="lede blog-lede">Zu KI, Geschäftsmodellen und Führung – von Mario Melle. <a href="/posts/feed.xml">RSS-Feed</a></p>
+    <div class="cards cards-3 blog-liste">
+      {% for post in site.posts %}
+      <a class="post" href="{{ post.url }}">
+        {% if post.image %}<img src="{{ post.image }}" alt="" loading="lazy">{% else %}<div class="post-thumb">✎</div>{% endif %}
+        <span class="post-datum">{{ post.date | date: "%d.%m.%Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <span class="more">Weiterlesen →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include fuss.html %}
+</body>
+</html>

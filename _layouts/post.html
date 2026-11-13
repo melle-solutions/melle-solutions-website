@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<head>
+{% include kopfdaten.html %}
+  <title>{{ page.title }} – Melle Solutions</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image }}">{% endif %}
+</head>
+<body>
+{% include kopf.html %}
+<section class="beitrag">
+  <div class="wrap narrow">
+    <p class="beitrag-meta"><a href="/posts/">← Alle Beiträge</a> · {{ page.date | date: "%d.%m.%Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.image and page.kein_titelbild != true %}<img class="beitrag-bild" src="{{ page.image }}" alt="">{% endif %}
+    <div class="beitrag-text">
+{{ content }}
+    </div>
+    <div class="beitrag-cta">
+      <p><b>Wie wäre das bei Ihnen?</b> In 15 Minuten klären wir, wo KI Ihnen Zeit und Geld spart.</p>
+      <a class="btn-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk">✓</span> 15-Min-Gespräch buchen</a>
+    </div>
+  </div>
+</section>
+{% include fuss.html %}
+</body>
+</html>

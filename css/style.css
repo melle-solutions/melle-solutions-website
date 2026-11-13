@@ -1,3 +1,6 @@
+/* Nunito selbst gehostet (SIL Open Font License) – keine Verbindung zu Google beim Seitenaufruf */
+@font-face{font-family:"Nunito"; src:url("../assets/fonts/nunito-latin.woff") format("woff"); font-weight:200 1000; font-style:normal; font-display:swap}
+@font-face{font-family:"Nunito"; src:url("../assets/fonts/nunito-italic-latin.woff") format("woff"); font-weight:200 1000; font-style:italic; font-display:swap}
 /* Melle Solutions – originalgetreue statische Kopie der Live-Seite */
 :root{
   --teal:#1a3838; --teal-2:#244a4a; --hero:#11322c; --lime:#96ff38; --orange:#ff7600;
@@ -65,8 +68,18 @@ header{background:#fff; border-bottom:1px solid var(--line); position:sticky; to
 .hero-pre{margin-top:18px; color:#d7e6e0; font-size:clamp(17px,1.5vw,20px)}
 .hero h1{color:#fff; margin-top:10px; max-width:15ch}
 .hero .btn-cta{margin-top:26px}
+.hero h1{max-width:18ch}
+.hero-pre{max-width:46ch}
+.hero-trust{list-style:none; padding:0; margin:22px 0 0; display:flex; flex-wrap:wrap; gap:8px 22px; font-size:14px; color:#d7e6e0}
+.hero-trust b{color:var(--lime); font-weight:800}
 .hero-img{position:relative}
 .hero-img img{width:100%; object-fit:contain; filter:drop-shadow(0 20px 50px rgba(0,0,0,.45))}
+/* Foto läuft unten und links weich in den Hintergrund aus, statt hart abgeschnitten zu wirken */
+.hero-img img{filter:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 58%,transparent 97%),linear-gradient(to right,transparent 0,#000 18%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to bottom,#000 58%,transparent 97%),linear-gradient(to right,transparent 0,#000 18%);
+  mask-composite:intersect}
 /* Unterseiten-Hero (zentriert, ohne Foto) */
 .subhero .wrap{padding-block:clamp(52px,7vw,94px)}
 .subhero .pill{margin-bottom:18px}
@@ -194,5 +207,261 @@ footer .wrap{padding-block:32px; display:flex; flex-wrap:wrap; gap:16px 28px; al
 footer .mark{width:38px; height:38px}
 footer b{color:#fff}
 footer a{color:var(--lime)}
+
+/* Storytelling „Warum mit mir?“ */
+.story{margin-top:26px}
+.story .no{font-size:13px; letter-spacing:.08em; text-transform:uppercase}
+.haltung{margin:38px auto 0; max-width:760px; text-align:center; font-size:clamp(20px,2.2vw,26px); font-weight:800; color:var(--teal); line-height:1.35}
+.haltung cite{display:block; margin-top:10px; font-size:14px; font-weight:600; font-style:normal; color:var(--muted)}
+/* KI-Boutique */
+.frage{margin:26px auto 0; max-width:640px; background:var(--paper-2); border-left:4px solid var(--lime); border-radius:10px; padding:16px 20px; text-align:left; font-weight:800; color:var(--teal); font-size:18px}
+.frage span{display:block; font-weight:600; font-size:15px; color:var(--muted); margin-top:6px}
+.paradigmen{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px}
+.paradigmen div{border-top:3px solid var(--lime); padding-top:14px}
+.paradigmen b{color:var(--teal); font-size:16px}
+.paradigmen p{margin:6px 0 0; font-size:15px}
+@media(max-width:900px){ .paradigmen{grid-template-columns:1fr} }
+@media(max-width:560px){ .paradigmen{grid-template-columns:1fr} }
+.center{text-align:center}
+/* Kundengeschichten */
+#projekte h2{margin-bottom:26px}
+.story3{margin:12px 0 0}
+.story3 dt{font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-top:12px}
+.story3 dd{margin:3px 0 0}
+/* Pippi + Coach-Fragen in den Story-Karten */
+.pippi{margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); font-weight:700; color:var(--teal); font-style:italic}
+.pippi span{display:block; font-size:13px; font-weight:600; font-style:normal; color:var(--muted); margin-top:4px}
+.fragen{margin:8px 0 0; padding-left:0; list-style:none}
+.fragen li{padding-left:22px; position:relative; margin-top:6px; font-weight:700; color:var(--teal)}
+.fragen li::before{content:"?"; position:absolute; left:0; top:0; width:16px; height:16px; border-radius:50%; background:var(--lime); color:var(--teal); font-size:11px; font-weight:900; display:grid; place-items:center}
+/* Logoleiste „Gegründet und aufgebaut“ – bewusst grau, damit der Termin-Knopf führt */
+.gegruendet{margin-top:40px; text-align:center}
+.gegruendet ul{list-style:none; padding:0; margin:14px 0 0; display:flex; flex-wrap:wrap; justify-content:center; gap:18px 52px}
+.gegruendet li{display:flex; flex-direction:column; align-items:center; gap:6px; min-width:140px}
+.gegruendet small{font-size:12px; color:var(--muted); font-weight:600}
+.gegruendet img{height:36px; margin:-5px 0; width:auto; filter:grayscale(1) opacity(.6)}
+.wm{font-size:24px; line-height:26px; color:#8a9692; font-weight:800; letter-spacing:-.02em}
+.wm b{font-weight:800}
+.wm-dotsource{font-weight:600} .wm-dotsource b{font-weight:800}
+.wm-divae{font-weight:900; text-transform:lowercase}
+.wm-constancy{font-weight:500; letter-spacing:.01em}
+/* Zitat als eigener ruhiger Zwischenblock; Folgeblöcke gleichen Themas schließen ohne Lücke an */
+.zitat{padding-block:clamp(40px,4.5vw,64px)}
+.zitat .haltung{margin-top:0}
+section.anschluss{padding-top:0}
+/* Auszeichnungen als Plaketten (eigene Gestaltung, keine fremden Logos) */
+.plaketten{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:18px 0 34px}
+.plakette{display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px;
+  background:linear-gradient(180deg,#fff,var(--paper-2)); border:1px solid var(--line); border-radius:16px; padding:20px 14px 16px}
+.plakette .lorbeer{width:46px; height:46px; color:#b98d2c}
+.plakette b{color:var(--teal); font-size:16px; line-height:1.25}
+.plakette small{font-size:12.5px; color:var(--muted); font-weight:600}
+@media(max-width:860px){ .plaketten{grid-template-columns:1fr 1fr} }
+/* Sprungziele nicht unter dem festen Kopf verstecken */
+section[id]{scroll-margin-top:86px}
+/* Karussell für Kundenstimmen: 3 sichtbar (Handy 1), wischen, Pfeile, Punkte, langsames Weiterlaufen */
+.karussell{position:relative}
+.karussell .testimonials{display:grid; grid-auto-flow:column; grid-template-columns:none; grid-auto-columns:calc((100% - 44px)/3);
+  gap:22px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:none; padding:4px 2px 8px}
+.karussell .testimonials::-webkit-scrollbar{display:none}
+.karussell .tm{scroll-snap-align:start}
+.k-btn{position:absolute; top:42%; z-index:2; width:42px; height:42px; border-radius:50%; border:1px solid var(--line);
+  background:#fff; color:var(--teal); font-size:26px; line-height:1; cursor:pointer; box-shadow:0 6px 18px rgba(17,50,44,.12)}
+.k-btn:hover{border-color:var(--teal)}
+.k-prev{left:-18px} .k-next{right:-18px}
+.k-dots{display:flex; justify-content:center; gap:8px; margin-top:16px}
+.k-dots span{width:8px; height:8px; border-radius:50%; background:var(--line); transition:background .2s, width .2s}
+.k-dots span.on{background:var(--teal); width:22px; border-radius:4px}
+@media(max-width:860px){ .karussell .testimonials{grid-auto-columns:86%} .k-btn{display:none} }
+/* Handy-Menü: Burger-Knopf klappt das Menü unter dem Kopf auf; Termin-Knopf kompakt */
+header{position:sticky}
+.burger{display:none; width:44px; height:44px; border:1px solid var(--line); border-radius:12px; background:#fff; cursor:pointer;
+  flex-direction:column; justify-content:center; align-items:center; gap:5px; padding:0}
+.burger span{display:block; width:20px; height:2px; background:var(--teal); border-radius:2px; transition:transform .2s, opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:999px){
+  .burger{display:flex}
+  .nav{gap:10px; position:static}
+  .menu{position:absolute; left:0; right:0; top:100%; flex-direction:column; gap:0; margin:0;
+    background:#fff; border-bottom:1px solid var(--line); box-shadow:0 14px 30px rgba(17,50,44,.12)}
+  .menu.offen{display:flex}
+  .menu a{padding:16px 22px; font-size:17px; border-top:1px solid var(--line)}
+  .menu a:hover{box-shadow:none; background:var(--paper-2)}
+  .nav-cta{padding:9px 14px}
+  .nav-cta .nav-cta-txt small{display:none}
+  .nav-cta .nav-cta-txt b{font-size:14px}
+}
+@media(max-width:420px){ .brand-txt small{display:none} .nav-cta .chk{display:none} }
+/* Videos: erst beim Klick laden (Datensparsamkeit), 16:9 */
+.video{position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:var(--hero); margin:12px 0 4px}
+.video iframe,.video video{position:absolute; inset:0; width:100%; height:100%; border:0; background:#000}
+.video-start{position:absolute; inset:0; width:100%; border:0; cursor:pointer; color:#fff; font:inherit; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:8px; padding:14px; text-align:center;
+  background:radial-gradient(60% 80% at 50% 40%, rgba(150,255,56,.18), transparent 70%), var(--hero)}
+.video-start .play{width:58px; height:58px; border-radius:50%; background:var(--orange); display:grid; place-items:center; font-size:22px; padding-left:4px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35); transition:transform .15s}
+.video-start:hover .play{transform:scale(1.08)}
+.video-titel{font-weight:800; font-size:15px}
+.video-start small{font-size:11.5px; opacity:.7}
+.vergleich{margin-top:12px}
+.vergleich summary{cursor:pointer; font-weight:700; color:var(--accent); font-size:14px}
+.bereit{display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:center}
+.bereit .btn-cta{margin-top:10px}
+.video-dunkel{box-shadow:0 20px 50px rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){ .bereit{grid-template-columns:1fr; gap:26px} }
+/* Volle Kundenstimmen: etwas kleinere Schrift, Name immer unten */
+.karussell .tm{display:flex; flex-direction:column}
+.karussell .tm blockquote{font-size:15px; line-height:1.6}
+.karussell .tm figcaption{margin-top:auto; padding-top:14px}
+/* Kontaktbereich ruhiger: eine Hauptaktion (Formular), Kalender als Textlink, Karte erst auf Klick */
+.contact-grid{align-items:start}
+.kontakt-text .on-dark-sub{margin-bottom:22px}
+.on-dark-list a{color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.25)}
+.on-dark-list a:hover{border-bottom-color:var(--lime)}
+.karte-link{background:none; border:0; padding:0; font:inherit; color:var(--lime); cursor:pointer; text-decoration:underline; text-underline-offset:3px}
+.karte{margin-top:14px; aspect-ratio:16/10; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.15)}
+.karte iframe{width:100%; height:100%; border:0}
+.kalender-link{margin-top:26px}
+.kalender-link a{color:var(--lime); font-weight:700; text-decoration:none}
+.kalender-link a:hover{text-decoration:underline}
+/* constancy-Logo ist breiter und trägt eine Unterzeile: etwas höher, damit es optisch gleich groß wirkt */
+.gegruendet img.logo-cy{height:44px; margin:-9px 0}
+/* Melle Solutions in der Gründungsleiste: Zeichen + Name, grau wie die anderen */
+.wm-ms{display:inline-flex; align-items:center; gap:8px; font-weight:800}
+.gegruendet .wm-ms img{height:28px; margin:0}
+/* Summenzeile unter der Gründungsleiste */
+.gruendungen-summe{margin:18px 0 0; font-size:14px; font-weight:700; color:var(--muted)}
+/* Vorstellungsvideo ist Hochformat (9:16) */
+.video-hoch{aspect-ratio:9/16; width:100%; max-width:330px; justify-self:center; margin:0}
+/* Kundengeschichten als Zeitleiste: neueste links, ältere rechts; gleiche Mechanik wie das Stimmen-Karussell */
+.karussell .cases{display:grid; grid-auto-flow:column; grid-template-columns:none; grid-auto-columns:calc((100% - 48px)/3);
+  gap:24px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:none; padding:18px 2px 8px}
+.karussell .cases::-webkit-scrollbar{display:none}
+.karussell .case{scroll-snap-align:start; position:relative}
+.zeitleiste .cases{background:linear-gradient(var(--line),var(--line)) 0 7px/100% 2px no-repeat}
+.wann{position:absolute; top:-18px; left:22px; display:flex; align-items:center; gap:8px}
+.wann span{background:var(--teal); color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:999px}
+.wann b{background:var(--orange); color:#fff; font-size:11px; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; letter-spacing:.05em}
+.zeitleiste-hinweis{margin:-14px 0 18px; font-size:13px; color:var(--muted)}
+.case .video-hoch{max-width:230px; margin:12px auto 4px}
+.video-copy{margin:4px 0 0; font-size:11.5px; color:var(--muted); text-align:right}
+.video-copy.hell{color:rgba(255,255,255,.55); text-align:center}
+.video-mit-copy{margin:0; justify-self:center; width:100%; max-width:330px}
+.video-mit-copy .video-hoch{max-width:none}
+@media(max-width:860px){ .karussell .cases{grid-auto-columns:88%} }
+/* dünner Hinweis unter Demo-Videos */
+.video-copy.mitte{text-align:center; font-weight:300; font-style:italic}
+/* Leistungen: vier Karten, mittelbreit 2×2 */
+.cards-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){ .cards-4{grid-template-columns:1fr 1fr} }
+@media(max-width:620px){ .cards-4{grid-template-columns:1fr} }
+/* Vertrauensblock „Sicher und zukunftsfest“ */
+.sicher{background:linear-gradient(180deg,#fff,var(--paper-2))}
+.sicher-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:26px}
+.sicher-punkt{background:#fff; border:1px solid var(--line); border-top:4px solid var(--lime); border-radius:16px; padding:24px}
+.sicher-icon{font-size:26px; line-height:1}
+.sicher-punkt h3{margin-top:12px; font-size:18px}
+.sicher-punkt p{margin:10px 0 0}
+@media(max-width:860px){ .sicher-grid{grid-template-columns:1fr} }
+/* Ergebnis-Leiste unter dem Kopf */
+.ergebnisse{text-decoration:none; color:inherit; position:relative; padding-bottom:44px}
+.ergebnisse .feat{flex-direction:column; gap:4px}
+.ergebnisse .zahl{font-size:28px; font-weight:900; color:var(--orange); line-height:1.1; white-space:nowrap}
+.ergebnisse .feat h3{margin:0}
+.ergebnisse-mehr{position:absolute; right:22px; bottom:12px; font-size:13px; font-weight:800; color:var(--accent)}
+.ergebnisse:hover .ergebnisse-mehr{text-decoration:underline}
+/* Ablauf in drei Schritten */
+.steps.steps-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){ .steps.steps-3{grid-template-columns:1fr} }
+/* Erster Bildschirm kompakter, damit die Ergebnis-Leiste ohne Scrollen sichtbar ist */
+.hero-grid{padding-block:clamp(22px,2.5vw,36px) clamp(64px,6vw,84px)}
+.hero h1{font-size:clamp(30px,4.2vw,50px)}
+.hero-img img{max-height:440px; width:auto; max-width:100%; margin-inline:auto; display:block}
+section.hero{padding-block:0}
+.hero-pre{margin-top:12px}
+.hero .btn-cta{margin-top:20px}
+.hero-trust{margin-top:16px; gap:6px 18px; font-size:13.5px}
+/* Ablauf direkt nach dem ersten Bildschirm */
+.schritte-oben{padding-top:clamp(56px,6vw,80px)}
+.schritte-oben .step{background:var(--paper-2)}
+/* Kernsatz in Kundenstimmen hervorheben */
+.tm blockquote strong{color:var(--teal); font-weight:800; background:linear-gradient(transparent 62%, rgba(150,255,56,.35) 0)}
+/* „Warum mit mir?“ mit Vorstellungsvideo daneben; Bereit-Block einspaltig */
+.warum-kopf{display:grid; grid-template-columns:1fr 260px; gap:36px; align-items:center}
+.warum-lede{margin:14px 0 0; text-align:left; max-width:44ch}
+.warum-kopf .video-mit-copy{max-width:260px}
+.bereit-solo .btn-cta{margin-top:14px}
+.bereit-solo .on-dark-sub{margin-inline:auto}
+@media(max-width:760px){ .warum-kopf{grid-template-columns:1fr} .warum-kopf .video-mit-copy{max-width:240px} }
+/* Handy: Foto kleiner, Ergebnisse rücken näher */
+@media(max-width:860px){
+  .hero-img img{max-height:240px}
+  .hero-grid{gap:8px; padding-bottom:56px}
+  .hero-trust{gap:2px 14px}
+  .hero-trust li:last-child{display:none}
+}
+/* Redensart im dunklen Schlussaufruf */
+.haltung-dunkel{color:#fff; margin:18px auto 22px; font-size:clamp(19px,2vw,24px)}
+.haltung-dunkel cite{color:rgba(255,255,255,.6)}
+/* Link zu allen Blogbeiträgen */
+.blog-alle{margin-top:20px; text-align:right}
+.blog-alle a{color:var(--accent); font-weight:800; text-decoration:none}
+.blog-alle a:hover{text-decoration:underline}
+/* Leistungen: Kundenfrage + Denkweise kompakt */
+#schwerpunkte .frage{margin:18px 0 0; max-width:none}
+.denkweise{margin:16px 0 26px; max-width:80ch; color:var(--ink)}
+.denkweise b{color:var(--teal)}
+/* Zusatzleistungen zweispaltig; Frage/Denkweise in „Warum“ */
+.cards-2{grid-template-columns:1fr 1fr}
+@media(max-width:700px){ .cards-2{grid-template-columns:1fr} }
+#warum .frage{margin-top:30px; max-width:none}
+#warum .denkweise{margin-bottom:0}
+/* 5,0 im Kopf führt zu den Stimmen */
+.hero-trust a{color:inherit; text-decoration:none; border-bottom:1px dotted rgba(255,255,255,.4)}
+.hero-trust a:hover{border-bottom-color:var(--lime)}
+/* Fünf Logos in einer Reihe: feste Spalten, Text bricht um */
+.gegruendet ul{display:grid; grid-template-columns:repeat(5,1fr); gap:18px 22px; align-items:start}
+.gegruendet li{min-width:0}
+.gegruendet small{line-height:1.4}
+@media(max-width:860px){ .gegruendet ul{grid-template-columns:repeat(2,1fr)} }
+/* Verankerung je Kundengeschichte: Branche · Größe · Region */
+.case .kunde{margin:4px 0 0; font-size:13px; font-weight:700; color:var(--accent)}
+/* „Link kopieren“ unter Videos + Hervorhebung beim Anspringen */
+.video-link{display:inline-block; margin:6px 0 0; padding:3px 10px; border:1px solid var(--line); border-radius:999px; background:#fff;
+  font:inherit; font-size:12px; font-weight:700; color:var(--muted); cursor:pointer}
+.video-link:hover{color:var(--teal); border-color:var(--teal)}
+.video-link.ok{color:var(--accent); border-color:var(--lime)}
+.video-mit-copy + .video-link{display:block; margin-inline:auto}
+.video.angesprungen{box-shadow:0 0 0 4px var(--lime); transition:box-shadow .3s}
+/* Link im Ablauf zum Beispielfall */
+.step p a{color:var(--accent); font-weight:700}
+/* Rechtstexte: lesbar gesetzt */
+.rechtstext h1{margin-bottom:14px}
+.rechtstext h2{font-size:20px; margin:30px 0 8px}
+.rechtstext p{margin:0 0 12px; max-width:72ch}
+.rechtstext .lede{margin-inline:0}
+.rechtstext a{color:var(--accent)}
+/* Blog: Übersicht und Beitragsseite */
+.blog-lede{margin:10px 0 28px; text-align:left; margin-inline:0}
+.blog-liste{margin-top:10px}
+.post-datum{display:block; padding:14px 20px 0; font-size:12px; font-weight:700; color:var(--muted)}
+.beitrag-meta{font-size:14px; color:var(--muted); margin:0 0 10px}
+.beitrag-meta a{color:var(--accent); font-weight:700; text-decoration:none}
+.beitrag h1{font-size:clamp(28px,3.6vw,42px); margin-bottom:22px}
+.beitrag-bild{width:100%; border-radius:14px; margin:0 0 26px}
+.beitrag-text{font-size:17px; line-height:1.75; color:var(--ink)}
+.beitrag-text p{margin:0 0 18px}
+.beitrag-text h2,.beitrag-text h3{margin:30px 0 12px}
+.beitrag-text img{max-width:100%; border-radius:10px; margin:10px 0}
+.beitrag-text a{color:var(--accent)}
+.beitrag-text blockquote{margin:20px 0; padding:4px 18px; border-left:4px solid var(--lime); color:var(--teal)}
+.blog-video{position:relative; aspect-ratio:16/9; margin:18px 0}
+.blog-video video{width:100%; height:100%; border-radius:12px; background:#000}
+.beitrag-cta{margin-top:40px; padding:24px; border-radius:16px; background:var(--paper-2); border:1px solid var(--line)}
+.beitrag-cta p{margin:0 0 14px}
+/* Platzhalter: von Mario auszufüllen, fällt bewusst auf */
+.ph{background:#fff3c4; outline:1px dashed #d19a00; padding:0 4px; border-radius:4px; color:#7a5600; font-weight:700}
 
 @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
