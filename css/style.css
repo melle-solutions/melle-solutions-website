@@ -516,3 +516,19 @@ section.hero{padding-block:0}
 .ph{background:#fff3c4; outline:1px dashed #d19a00; padding:0 4px; border-radius:4px; color:#7a5600; font-weight:700}
 
 @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+
+/* Eigenes Einwilligungs-Banner (js/einwilligung.js) – beide Antworten gleich gewichtet */
+.einw{position:fixed; left:16px; right:16px; bottom:16px; z-index:9999; display:flex; justify-content:center; pointer-events:none}
+.einw-in{pointer-events:auto; max-width:620px; max-height:calc(100vh - 32px); overflow:auto; background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:16px; box-shadow:0 12px 40px rgba(17,50,44,.22); padding:20px 22px; font-size:15px; line-height:1.5}
+.einw-in p{margin:0 0 12px}
+.einw-titel{font-weight:800; color:var(--teal); font-size:17px}
+.einw-auswahl{display:grid; gap:10px; margin:0 0 14px; padding:12px 14px; background:var(--paper-2); border-radius:12px; font-size:14px}
+.einw-auswahl[hidden]{display:none}
+.einw-auswahl label{display:flex; gap:10px; align-items:flex-start; cursor:pointer}
+.einw-auswahl input{margin-top:4px; accent-color:var(--teal)}
+.einw-knoepfe{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+.einw-knoepfe button{font:inherit; font-weight:800; cursor:pointer; padding:10px 20px; border-radius:999px; border:2px solid var(--teal); background:var(--teal); color:#fff; min-width:130px}
+.einw-knoepfe button:hover{background:var(--teal-2)}
+.einw-knoepfe .einw-link{background:none; border:0; color:var(--teal); text-decoration:underline; min-width:0; padding:10px 6px; font-weight:700}
+.einw-knoepfe .einw-link:hover{background:none}
+@media(max-width:560px){ .einw{left:8px; right:8px; bottom:8px} .einw-in{padding:16px; font-size:14px} .einw-titel{font-size:16px} .einw-knoepfe button{flex:1; min-width:0; padding:10px 12px} .einw-knoepfe .einw-link{flex-basis:100%} }

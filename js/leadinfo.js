@@ -1,4 +1,4 @@
-// Leadinfo – wird erst geladen, wenn der Besucher in Usercentrics „Leadinfo“ zustimmt.
+// Leadinfo – wird erst geladen, wenn der Besucher in Einwilligungs-Banner (js/einwilligung.js) „Leadinfo“ zustimmt.
 (function (l, e, a, d, i, n, f, o) { if (!l[i]) { l.GlobalLeadinfoNamespace = l.GlobalLeadinfoNamespace || []; l.GlobalLeadinfoNamespace.push(i);
   l[i] = function () { (l[i].q = l[i].q || []).push(arguments) }; l[i].t = l[i].t || n; l[i].q = l[i].q || [];
   o = e.createElement(a); f = e.getElementsByTagName(a)[0]; o.async = 1; o.src = d; f.parentNode.insertBefore(o, f); }
