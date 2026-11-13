@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🤡 Das vegetarische Taschenmesser [Satire]"
+title: "Das vegetarische Taschenmesser [Satire]"
 date: 2026-04-13 17:00:54
 permalink: "/das-vegetarische-taschenmesser/"
 image: "/assets/blog/das-vegetarische-taschenmesser/20260413-Das-vegetarische-Taschenmesser-Versatool.jpeg"

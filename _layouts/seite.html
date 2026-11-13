@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+{% include kopfdaten.html %}
+  <title>{{ page.title }} – Melle Solutions</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+</head>
+<body>
+{% include kopf.html %}
+<section class="seite{% if page.klasse %} {{ page.klasse }}{% endif %}">
+  <div class="wrap{% unless page.breit %} narrow{% endunless %}">
+{{ content }}
+  </div>
+</section>
+{% include fuss.html %}
+<script src="/js/formulare.js?v=76"></script>
+</body>
+</html>

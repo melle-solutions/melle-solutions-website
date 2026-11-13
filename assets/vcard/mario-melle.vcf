@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Melle;Mario;
+ORG:Melle Solutions GmbH
+TITLE:CEO, Owner
+EMAIL;TYPE=work:mario@melle.com.de
+TEL;TYPE=mobile:+491777885505
+ADR;:;;August-Bebel-Strasse 27b;Jena;Germany;07743
+URL;TYPE=linktree:https://linktr.ee/mariomelle
+END:VCARD

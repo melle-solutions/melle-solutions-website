@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🐝 Gespräche, die man lieber aufschieben möchte…"
+title: "Gespräche, die man lieber aufschieben möchte…"
 date: 2022-04-13 07:00:09
 permalink: "/gespraeche-die-man-lieber-aufschieben-moechte/"
 image: "/assets/blog/gespraeche-die-man-lieber-aufschieben-moechte/Beitragsbild-Gespraeche-die-man-lieber-aufschieben-moechte.jpg"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 Manipulation!"
+title: "Manipulation!"
 date: 2022-08-16 07:00:31
 permalink: "/manipulation/"
 image: "/assets/blog/manipulation/Beitragsbild-Manipulation.jpg"

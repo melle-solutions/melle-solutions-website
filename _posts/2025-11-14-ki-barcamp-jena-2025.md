@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👥🤖 KI Barcamp Jena 2025"
+title: "KI Barcamp Jena 2025"
 date: 2025-11-14 07:13:00
 permalink: "/ki-barcamp-jena-2025/"
 excerpt: "Das KI-Barcamp Jena bringt Menschen aus Wissenschaft, Wirtschaft, Gesellschaft und Kultur zusammen, um künstliche Intelligenz in all ihren Facetten zu entdecken. In offener und kreativer Atmosphäre gestalten die Teilnehmenden selbst das Pro"

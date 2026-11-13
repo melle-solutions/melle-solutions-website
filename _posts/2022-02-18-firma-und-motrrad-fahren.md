@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 Eine Firma leiten, ist wie Motorrad fahren?"
+title: "Eine Firma leiten, ist wie Motorrad fahren?"
 date: 2022-02-18 07:00:12
 permalink: "/firma-und-motrrad-fahren/"
 image: "/assets/blog/firma-und-motrrad-fahren/Beitragsbild-Eine-Firma-leiten-ist-wie-Motorrad-fahren.jpg"

@@ -1,0 +1,22 @@
+---
+layout: seite
+title: Neuer Kontakt – Verteilerlisten
+description: Eintragung in die Verteilerlisten von Mario Melle.
+klasse: formular-seite
+noindex: true
+---
+<h1>Neuer Kontakt</h1>
+<p class="lede links">Eintragung in die Verteilerlisten.</p>
+<form class="formular" data-formular="lists" action="https://go.melle.com.de/formular.php" method="post" data-danke="Danke! Der Kontakt ist eingetragen.">
+  <div class="zwei"><label>Name<input name="nachname" autocomplete="family-name" required></label>
+  <label>Vorname<input name="vorname" autocomplete="given-name" required></label></div>
+  <label>E-Mail<input name="email" type="email" autocomplete="email" required></label>
+  <fieldset data-mindestens-eins="Bitte mindestens eine Liste wählen."><legend>Listen</legend>
+    <label class="wahl"><input type="checkbox" name="listen[]" value="AI"> <span>AI</span></label>
+    <label class="wahl"><input type="checkbox" name="listen[]" value="Networking"> <span>Networking</span></label>
+  </fieldset>
+  <label>Status des Newsletters<select name="newsletter"><option value="">Bitte auswählen …</option><option>Abonniert</option><option>Ausstehend</option></select></label>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <button class="btn-cta" type="submit">Eintragen</button>
+  <p class="status" role="status"></p>
+</form>

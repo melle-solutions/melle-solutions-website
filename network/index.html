@@ -1,0 +1,23 @@
+---
+layout: seite
+title: Netzwerk – jetzt eintragen
+description: In WhatsApp-Gruppen und E-Mail-Verteiler des Netzwerks von Mario Melle eintragen.
+klasse: formular-seite
+---
+<h1>Jetzt eintragen!</h1>
+<p class="lede links">Sie können sich hier in E-Mail-Verteilerlisten und WhatsApp-Gruppen eintragen.</p>
+<form class="formular" data-formular="network" action="https://go.melle.com.de/formular.php" method="post" data-danke="Fast geschafft! Ich habe Ihnen eine E-Mail geschickt – bitte bestätigen Sie Ihre Adresse mit dem Link darin. Danach nehme ich Sie in die gewählten Gruppen auf.">
+  <div class="zwei"><label>Vorname<input name="vorname" autocomplete="given-name" required></label>
+  <label>Nachname<input name="nachname" autocomplete="family-name" required></label></div>
+  <fieldset data-mindestens-eins="Bitte mindestens eine Gruppe wählen."><legend>Wählen Sie die WhatsApp-Gruppen in Jena und Umgebung</legend>
+    <label class="wahl"><input type="checkbox" name="gruppen[]" value="GF Business"> <span><b>GF Business:</b> für Anfragen, Angebote, Tipps, Vermittlungen und den schnellen Austausch</span></label>
+    <label class="wahl"><input type="checkbox" name="gruppen[]" value="GF Mittag"> <span><b>GF Mittag:</b> für die Koordinierung des gemeinsamen Mittagessens jeden Freitag 12 Uhr</span></label>
+    <label class="wahl"><input type="checkbox" name="gruppen[]" value="GF LinkedIn Supporter Group"> <span><b>GF LinkedIn Supporter Group:</b> für die gegenseitige Unterstützung beim LinkedIn-Ranking durch Liken, Kommentieren und Re-Posten von Beiträgen</span></label>
+  </fieldset>
+  <label>WhatsApp-Telefonnummer<input name="whatsapp" type="tel" autocomplete="tel" required></label>
+  <label>E-Mail-Adresse<input name="email" type="email" autocomplete="email" required></label>
+  <label class="wahl"><input type="checkbox" name="einwilligung" value="ja" required> <span>Ich bin damit einverstanden, dass diese Website meine Angaben speichert (siehe <a href="/datenschutz.html">Datenschutz</a>).</span></label>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <button class="btn-cta" type="submit">Eintragen</button>
+  <p class="status" role="status"></p>
+</form>

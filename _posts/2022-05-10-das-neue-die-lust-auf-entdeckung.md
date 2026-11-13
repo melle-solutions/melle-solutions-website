@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🐝 Das Neue – die Lust auf Entdeckung"
+title: "Das Neue – die Lust auf Entdeckung"
 date: 2022-05-10 07:00:59
 permalink: "/das-neue-die-lust-auf-entdeckung/"
 image: "/assets/blog/das-neue-die-lust-auf-entdeckung/Beitragsbild-Das-Neue.jpg"

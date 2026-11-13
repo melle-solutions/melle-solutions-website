@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🤖🌳 Übe dich in der Langsamkeit"
+title: "Übe dich in der Langsamkeit"
 date: 2025-01-04 15:02:38
 permalink: "/uebe-dich-in-der-langsamkeit/"
 image: "/assets/blog/uebe-dich-in-der-langsamkeit/20250102-Uebe-dich-in-der-Langsamkeit-Titelbild-1.jpg"

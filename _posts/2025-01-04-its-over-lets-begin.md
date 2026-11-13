@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 It’s over, let’s begin."
+title: "It’s over, let’s begin."
 date: 2025-01-04 15:02:43
 permalink: "/its-over-lets-begin/"
 image: "/assets/blog/its-over-lets-begin/1.jpg"

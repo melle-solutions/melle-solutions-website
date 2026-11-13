@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🐝 eCommerce Bootcamp SEO"
+title: "eCommerce Bootcamp SEO"
 date: 2020-10-19 15:14:00
 permalink: "/ecommerce-bootcamp-seo/"
 image: "/assets/blog/ecommerce-bootcamp-seo/Thumbnail-Video.png"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👥 Nadine Reinhold"
+title: "Im Gespräch mit Nadine Reinhold"
 date: 2023-04-21 07:00:08
 permalink: "/im-gespraech-mit-nadine-reinhold/"
 image: "/assets/blog/im-gespraech-mit-nadine-reinhold/Mario-Melle-Beitragsbild-Nadine-Reinhold.jpg"

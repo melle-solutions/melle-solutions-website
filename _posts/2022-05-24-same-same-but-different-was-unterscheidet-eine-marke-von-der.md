@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🐝 same same, but different – Was unterscheidet eine Marke von der anderen?"
+title: "same same, but different – Was unterscheidet eine Marke von der anderen?"
 date: 2022-05-24 07:00:46
 permalink: "/same-same-but-different-was-unterscheidet-eine-marke-von-der-anderen/"
 image: "/assets/blog/same-same-but-different-was-unterscheidet-eine-marke-von-der/Beitragsbild-same-same-but-different.jpg"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 Machen vs. Lassen (für Unternehmer)"
+title: "Machen vs. Lassen (für Unternehmer)"
 date: 2025-12-12 07:29:15
 permalink: "/🌳-machen-vs-lassen-fuer-unternehmer/"
 excerpt: "“Im Rückspiegel liegt Wahrheit“, sagt man doch? Wir verstehen die Vergangenheit in der Rückschau und auch ein Muster. Als Unternehmer ist oft die Frage, „Tue ich das Richtige?“. Ich denke, dass es Phasen gibt, die jede einzelne durchlaufen "

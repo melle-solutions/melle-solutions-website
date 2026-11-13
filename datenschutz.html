@@ -6,7 +6,11 @@
   <title>Datenschutz – Melle Solutions</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7600'/%3E%3Ctext x='32' y='45' font-family='sans-serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23122a2a'%3E%E3%82%B9%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=74">
+  <link rel="stylesheet" href="css/style.css?v=76">
+  <!-- Einwilligung: Usercentrics; Hotjar und Leadinfo starten erst nach Zustimmung -->
+  <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="J57LyVzlYjYLNm" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+  <script type="text/plain" data-usercentrics="Hotjar" src="/js/hotjar.js"></script>
+  <script type="text/plain" data-usercentrics="Leadinfo" src="/js/leadinfo.js"></script>
 </head>
 <body>
 
@@ -27,8 +31,8 @@
 <section class="rechtstext">
   <div class="wrap narrow">
     <h1>Datenschutzerklärung</h1>
-    <p class="lede">Kurz gesagt: Diese Website lädt beim Aufruf nichts von fremden Anbietern, setzt keine Cookies und misst nicht, wie Sie sich bewegen. Daten erheben wir nur, wenn Sie uns schreiben, ein Video oder eine Karte bewusst starten oder einen Termin buchen.</p>
-    <!-- Hinweis für Mario: vor dem Livegang von Kanzlei Liem (DSB) prüfen lassen. Leadinfo, Hotjar und Usercentrics sind noch nicht eingebaut und deshalb noch nicht beschrieben. -->
+    <p class="lede">Kurz gesagt: Beim Aufruf lädt diese Website nur unser Einwilligungs-Werkzeug. Analyse-Dienste (Leadinfo, Hotjar) starten erst, wenn Sie zustimmen – und Ihre Wahl können Sie jederzeit über „Cookie-Einstellungen“ unten auf jeder Seite ändern. Weitere Daten erheben wir nur, wenn Sie uns schreiben, ein Video oder eine Karte bewusst starten oder einen Termin buchen.</p>
+    <!-- Hinweis für Mario: vor dem Livegang von Kanzlei Liem (DSB) prüfen lassen. Speicherdauer der IP-Adressen bei Formularen festlegen. -->
 
     <h2>1. Verantwortlicher</h2>
     <p>Melle Solutions GmbH<br>August-Bebel-Straße 27b, 07743 Jena<br>Geschäftsführer: Mario Melle<br>Telefon: +49 177 788 5505 · E-Mail: <a href="mailto:office@melle.com.de">office@melle.com.de</a></p>
@@ -38,24 +42,34 @@
 
     <h2>3. Aufruf der Website und Hosting</h2>
     <p>Die Website wird über GitHub Pages bereitgestellt (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf verarbeitet der Anbieter technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite sowie Browser und Betriebssystem, um die Seite auszuliefern und gegen Missbrauch zu schützen. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO). Die Übermittlung in die USA stützt sich auf den Angemessenheitsbeschluss zum EU-US Data Privacy Framework, soweit der Anbieter danach zertifiziert ist, im Übrigen auf Standardvertragsklauseln. Mehr: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
-    <p>Schriften, Bilder und Skripte liegen auf derselben Website. Es werden beim Aufruf keine Inhalte von Drittanbietern nachgeladen und keine Cookies gesetzt.</p>
+    <p>Schriften, Bilder und Skripte liegen auf derselben Website. Von Drittanbietern wird beim Aufruf nur das Einwilligungs-Werkzeug geladen (siehe Abschnitt 5).</p>
 
     <h2>4. Kontaktformular</h2>
-    <p>Wenn Sie das Kontaktformular nutzen, verarbeiten wir Name, E-Mail-Adresse, optional Ihre Telefonnummer und Ihre Nachricht, um Ihre Anfrage zu beantworten. Die Angaben werden an unseren Server bei der Strato AG (Otto-Ostrowski-Straße 7, 10249 Berlin) unter go.melle.com.de übertragen, dort in einem nicht öffentlich zugänglichen Bereich gespeichert und uns per E-Mail zugestellt. Ihre IP-Adresse speichern wir dabei nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (Beantwortung allgemeiner Anfragen). Wir löschen die Angaben, sobald Ihre Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    <p>Wenn Sie das Kontaktformular nutzen, verarbeiten wir Name, E-Mail-Adresse, optional Ihre Telefonnummer und Ihre Nachricht, um Ihre Anfrage zu beantworten. Die Angaben werden an unseren Server bei der Strato AG (Otto-Ostrowski-Straße 7, 10249 Berlin) unter go.melle.com.de übertragen, dort in einem nicht öffentlich zugänglichen Bereich gespeichert und uns per E-Mail zugestellt. Zusätzlich speichern wir Zeitpunkt und IP-Adresse der Einsendung, um sie bei Bedarf nachweisen und Missbrauch abwehren zu können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (Beantwortung allgemeiner Anfragen, Nachweis und Missbrauchsabwehr). Wir löschen die Angaben, sobald Ihre Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    <p>Für die Eintragung in mein Netzwerk nutzen wir das Double-Opt-in-Verfahren: Nach dem Absenden erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach Ihrem Klick nehmen wir Sie auf. Zeitpunkt und IP-Adresse von Eintragung und Bestätigung speichern wir, um Ihre Einwilligung nachweisen zu können (Art. 6 Abs. 1 lit. a und c i. V. m. Art. 7 Abs. 1 DSGVO). Sie können sich jederzeit formlos per E-Mail wieder austragen.</p>
 
-    <h2>5. Videos</h2>
+    <h2>5. Einwilligungs-Werkzeug (Usercentrics)</h2>
+    <p>Um Ihre Einwilligung in Analyse-Dienste einzuholen und zu speichern, nutzen wir die Consent-Management-Plattform von Usercentrics (Usercentrics GmbH, Sendlinger Straße 7, 80331 München). Dabei werden Ihre Einwilligungsentscheidung, ein pseudonymes Kennzeichen sowie technische Daten (u. a. gekürzte IP-Adresse, Browser, Zeitpunkt) verarbeitet und in Ihrem Browser gespeichert. Rechtsgrundlage ist unsere rechtliche Pflicht, Einwilligungen nachzuweisen (Art. 6 Abs. 1 lit. c i. V. m. Art. 7 Abs. 1 DSGVO), sowie § 25 Abs. 2 TDDDG. Das Banner wird in der Fassung von eRecht24 angezeigt; dabei wird ein Bild von einem Server der eRecht24 GmbH in Deutschland geladen.</p>
+
+    <h2>6. Firmenerkennung (Leadinfo) – nur mit Einwilligung</h2>
+    <p>Wenn Sie zustimmen, setzen wir Leadinfo ein (Leadinfo B.V., Hofplein 20, 3032 AC Rotterdam, Niederlande). Leadinfo erkennt anhand der IP-Adresse, ob ein Besuch von einem Unternehmen stammt, und zeigt uns Firmenname und besuchte Seiten. Personenbezogene Profile einzelner Besucher legen wir nicht an. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie über „Cookie-Einstellungen“ jederzeit widerrufen können.</p>
+
+    <h2>7. Besucheranalyse (Hotjar) – nur mit Einwilligung</h2>
+    <p>Wenn Sie zustimmen, nutzen wir Hotjar (Hotjar Ltd., Malta; Teil der Contentsquare-Gruppe, Paris), um zu verstehen, wie die Seite genutzt wird – etwa wohin geklickt und wie weit gescrollt wird. Eingaben in Formularfelder werden dabei nicht aufgezeichnet. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), widerrufbar über „Cookie-Einstellungen“.</p>
+
+    <h2>8. Videos</h2>
     <p>Die Videos auf dieser Seite liegen auf unserem eigenen Server bei der Strato AG (go.melle.com.de). Sie werden erst geladen, wenn Sie auf „abspielen“ klicken. Dabei verarbeitet der Server technisch notwendige Daten wie Ihre IP-Adresse, um das Video auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Ein externer Videodienst wird nicht eingesetzt.</p>
 
-    <h2>6. Karte (Google Maps)</h2>
+    <h2>9. Karte (Google Maps)</h2>
     <p>Die Karte im Kontaktbereich wird erst geladen, wenn Sie auf „Karte anzeigen“ klicken. Dann wird eine Verbindung zu Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland) aufgebaut; dabei werden u. a. Ihre IP-Adresse und gegebenenfalls Daten an Google LLC in den USA übermittelt. Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO), die Sie widerrufen können, indem Sie die Karte nicht mehr aufrufen. Mehr: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>
 
-    <h2>7. Terminbuchung</h2>
+    <h2>10. Terminbuchung</h2>
     <p>Für Termine verlinken wir auf unseren Buchungskalender bei TidyCal (cal.melle.com.de). Erst wenn Sie diesen Link öffnen, verlassen Sie unsere Website; für die Buchung gelten dann die Datenschutzhinweise von TidyCal. Die Angaben, die Sie dort machen, nutzen wir zur Vorbereitung und Durchführung des Gesprächs (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
-    <h2>8. Kontakt per E-Mail oder Telefon</h2>
+    <h2>11. Kontakt per E-Mail oder Telefon</h2>
     <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b bzw. f DSGVO) und löschen sie, wenn sie dafür nicht mehr benötigt werden und keine Aufbewahrungspflichten bestehen.</p>
 
-    <h2>9. Ihre Rechte</h2>
+    <h2>12. Ihre Rechte</h2>
     <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung, auf Datenübertragbarkeit sowie das Recht, einer Verarbeitung auf Grundlage berechtigter Interessen zu widersprechen. Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Wenden Sie sich dazu an uns oder an unseren Datenschutzbeauftragten.</p>
     <p>Außerdem können Sie sich bei einer Aufsichtsbehörde beschweren, zum Beispiel beim Thüringer Landesbeauftragten für den Datenschutz und die Informationsfreiheit (TLfDI), Häßlerstraße 8, 99096 Erfurt.</p>
 
@@ -66,9 +80,10 @@
 <footer>
   <div class="wrap">
     <img class="mark" src="assets/logo-melle-white.svg" alt="" width="38" height="38">
-    <div class="foot-txt"><b>Melle Solutions GmbH</b> · Jena · HRB 519349<br><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · mario@melle.com.de · +49 177 788 5505</div>
+    <div class="foot-txt"><b>Melle Solutions GmbH</b> · Jena · HRB 519349<br>mario@melle.com.de · +49 177 788 5505</div>
   </div>
+  <div class="wrap"><nav class="fuss-nav" aria-label="Weitere Seiten"><a href="/ki-beirat/">KI-Beirat</a><a href="/bafa/">BAFA-Förderung</a><a href="/worklow-miete/">Miete deinen Workflow</a><a href="/network/">Netzwerk</a><a href="/vcard/">Kontaktkarte</a><a href="/posts/">Blog</a><a href="/agb/">AGB</a><a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a><a href="#" onclick="if(window.UC_UI){UC_UI.showSecondLayer()};return false;">Cookie-Einstellungen</a></nav></div>
 </footer>
-<script src="js/menu.js?v=74"></script>
+<script src="js/menu.js?v=76"></script>
 </body>
 </html>

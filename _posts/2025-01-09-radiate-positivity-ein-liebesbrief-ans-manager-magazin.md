@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 „Radiate Positivity“, ein Liebesbrief ans Manager Magazin"
+title: "„Radiate Positivity“, ein Liebesbrief ans Manager Magazin"
 date: 2025-01-09 23:19:26
 permalink: "/radiate-positivity-ein-liebesbrief-ans-manager-magazin/"
 image: "/assets/blog/radiate-positivity-ein-liebesbrief-ans-manager-magazin/20250109-Radiate-Positivity-ein-Liebesbrief-ans-Manager-Magazin-Beitragsbild.jpg"

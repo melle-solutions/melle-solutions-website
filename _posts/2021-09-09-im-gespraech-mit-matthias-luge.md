@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👥 Matthias Luge"
+title: "Im Gespräch mit Matthias Luge"
 date: 2021-09-09 11:02:51
 permalink: "/im-gespraech-mit-matthias-luge/"
 image: "/assets/blog/im-gespraech-mit-matthias-luge/Beitragsbild-Matthias-Luge.jpg"

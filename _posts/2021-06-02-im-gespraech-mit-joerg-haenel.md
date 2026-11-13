@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👥 Jörg Hänel"
+title: "Im Gespräch mit Jörg Hänel"
 date: 2021-06-02 17:16:44
 permalink: "/im-gespraech-mit-joerg-haenel/"
 image: "/assets/blog/im-gespraech-mit-joerg-haenel/Beitragsbild-Joerg-Haenel.jpg"

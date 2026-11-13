@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👥🤖 Kognitive Schulden – das unterschätzte Risiko der KI-Revolution"
+title: "Kognitive Schulden – das unterschätzte Risiko der KI-Revolution"
 date: 2026-06-02 12:02:40
 permalink: "/kognitive-schulden-das-unterschaetzte-risiko-der-ki-revolution/"
 excerpt: "Künstliche Intelligenz definiert unsere Arbeitswelt und unseren Alltag neu. Mitedem Update werden KI-Anwendungen leistungsfähiger, effizienter, bequemer –aber: Was passiert mit uns als Anwender? Was passiert mit unserer kognitivenLeistungsf"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳 Ich gendere nicht, weil ich (sowieso) Frauen gleichberechtige!"
+title: "Ich gendere nicht, weil ich (sowieso) Frauen gleichberechtige!"
 date: 2022-03-07 07:00:37
 permalink: "/frauentag-gendern/"
 image: "/assets/blog/frauentag-gendern/Beitragsbild-Ich-gendere-nicht.jpg"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌳🪓 Die meisten Probleme entstehen bei ihre Lösung"
+title: "Die meisten Probleme entstehen bei ihre Lösung"
 date: 2025-01-22 19:41:30
 permalink: "/🌳🪓-die-meisten-probleme-entstehen-bei-ihre-loesung/"
 image: "/assets/blog/die-meisten-probleme-entstehen-bei-ihre-loesung/Beitragsbild-Die-meisten-Probleme-entstehen-bei-ihrer-Loesung-1024x576-7.jpg"

@@ -1,0 +1,85 @@
+---
+layout: seite
+title: BAFA-Förderung – Anfrage
+description: Wir übernehmen die Abwicklung Ihrer BAFA-Förderung für Unternehmensberatung.
+klasse: formular-seite bafa-seite
+---
+<span class="kicker">Förderung für Unternehmensberatung</span>
+<h1>Wir übernehmen die Abwicklung der Förderung</h1>
+<ol class="bafa-ablauf">
+ <li><b>Vollmacht herunterladen</b>, ausfüllen und unterschreiben: <a href="/assets/bafa/Beratervollmacht.pdf" download>Beratervollmacht (PDF)</a></li>
+ <li><b>Formular ausfüllen</b> und die unterschriebene Vollmacht hochladen.</li>
+ <li>Wir legen die Anfrage beim BAFA an und melden uns bei Ihnen.</li>
+</ol>
+<p class="hinweis">Ihre Angaben werden verschlüsselt an unseren Server übertragen und dort geschützt abgelegt – nicht per E-Mail verschickt.</p>
+<form class="formular" data-formular="bafa" action="https://go.melle.com.de/formular.php" method="post" enctype="multipart/form-data" data-danke="Danke! Ihre Anfrage und die Vollmacht sind angekommen. Wir melden uns, sobald die Anfrage beim BAFA angelegt ist.">
+<fieldset><legend>Vollmacht</legend>
+  <label>Unterschriebene Vollmacht hochladen (PDF, JPG oder PNG, max. 10 MB)<input name="vollmacht" type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+</fieldset>
+<fieldset><legend>Antragsteller</legend>
+  <label>Bei der antragstellenden Person handelt es sich um<select name="Art des Antragstellers" required><option value="">Bitte auswählen …</option><option>eine freiberuflich tätige Person</option><option>ein Unternehmen</option></select></label>
+
+  <label>Name der Organisation<input name="Name der Organisation" type="text" required></label>
+
+  <div class="zwei"><label>Anrede<select name="Anrede" required><option value="">Bitte auswählen …</option><option>Herr</option><option>Frau</option></select></label><label>Vorname<input name="Vorname" type="text" required></label></div>
+  <label>Nachname<input name="Nachname" type="text" required></label>
+
+  <label>Land<select name="Land" required><option value="">Bitte auswählen …</option><option>Deutschland</option><option>Anderes</option></select></label>
+
+  <div class="zwei"><label>Postleitzahl und Ort<input name="Postleitzahl und Ort" type="text" required></label><label>Straße und Hausnummer<input name="Straße und Hausnummer" type="text" required></label></div>
+  <div class="zwei"><label>Telefonnummer<input name="Telefonnummer" type="tel" required></label><label>E-Mail<input name="E-Mail" type="email" required></label></div>
+  <label>Webseite des Unternehmens<input name="Webseite des Unternehmens" type="url"></label>
+
+</fieldset>
+<fieldset><legend>Standort der Maßnahme (falls abweichend)</legend>
+  <div class="zwei"><label>Standort PLZ und Ort<input name="Standort PLZ und Ort" type="text"></label><label>Standort Straße und Hausnummer<input name="Standort Straße und Hausnummer" type="text"></label></div>
+</fieldset>
+<fieldset><legend>Beratung und Unternehmen</legend>
+  <label>Beratungsthema<textarea name="Beratungsthema" rows="3" required></textarea></label>
+
+  <label>Rechtsform des Unternehmens<select name="Rechtsform des Unternehmens" required><option value="">Bitte auswählen …</option><option>juristische Person</option><option>natürliche Person</option></select></label>
+
+  <label>Art der juristischen Person<select name="Art der juristischen Person" required><option value="">Bitte auswählen …</option><option>öffentlich-rechtlich</option><option>privatrechtlich</option></select></label>
+
+  <label>Vorsteuerabzugsberechtigt?<select name="Vorsteuerabzugsberechtigt" required><option value="">Bitte auswählen …</option><option>ja</option><option>nein</option><option>teilweise</option></select></label>
+
+  <label>Gründungsdatum des Unternehmens<input name="Gründungsdatum des Unternehmens" type="date" required></label>
+
+  <label>Geschäftsgegenstand<textarea name="Geschäftsgegenstand" rows="3" required></textarea></label>
+
+  <label>Wirtschaftszweigklassifikation (WZ-Code)<input name="Wirtschaftszweigklassifikation" type="text" required> <small>Den Code finden Sie in der <a href="/assets/bafa/BAFA-Kurzanleitung.pdf" target="_blank">Gliederung der Wirtschaftszweige (PDF)</a>.</small></label>
+
+  <label>Haben Sie seit 2022 bereits Fördermittel (De-minimis, auch Coronahilfen) erhalten?<select name="De-minimis seit 2022" required><option value="">Bitte auswählen …</option><option>Ja</option><option>Nein</option><option>Weiß ich nicht</option></select></label>
+
+</fieldset>
+<fieldset data-mindestens-eins="Bitte bestätigen Sie die Voraussetzungen."><legend>Voraussetzungen für die Bewilligung – ich bestätige:</legend>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen ist nicht unternehmensberatend oder schulend tätig und wird es nicht werden." required> <span>Mein Unternehmen ist nicht unternehmensberatend oder schulend tätig und wird es nicht werden.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen ist im Förderprogramm noch nicht als Beratungsunternehmen aufgetreten." required> <span>Mein Unternehmen ist im Förderprogramm noch nicht als Beratungsunternehmen aufgetreten.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Über das Vermögen meines Unternehmens wurde kein Insolvenzantrag gestellt, und es besteht keine Verpflichtung zu einem solchen Schritt." required> <span>Über das Vermögen meines Unternehmens wurde kein Insolvenzantrag gestellt, und es besteht keine Verpflichtung zu einem solchen Schritt.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen fällt nicht unter die Ausschlussgründe gem. Artikel 1 der Verordnung Nr. 2023/2831." required> <span>Mein Unternehmen fällt nicht unter die Ausschlussgründe gem. Artikel 1 der Verordnung Nr. 2023/2831.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen steht in keinem Beteiligungsverhältnis zu juristischen Personen des öffentlichen Rechts (z. B. Bund, Länder, Gemeinden oder Gemeindeverbände, Kammern) oder zu Religionsgemeinschaften bzw. deren Eigenbetrieben." required> <span>Mein Unternehmen steht in keinem Beteiligungsverhältnis zu juristischen Personen des öffentlichen Rechts (z. B. Bund, Länder, Gemeinden oder Gemeindeverbände, Kammern) oder zu Religionsgemeinschaften bzw. deren Eigenbetrieben.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen ist nicht gemeinnützig und keine Stiftung." required> <span>Mein Unternehmen ist nicht gemeinnützig und keine Stiftung.</span></label>
+  <label class="wahl"><input type="checkbox" name="Voraussetzungen[]" value="Mein Unternehmen erfüllt die KMU-Kriterien der Empfehlung der EU-Kommission vom 6. Mai 2003 (2003/361/EG)." required> <span>Mein Unternehmen erfüllt die KMU-Kriterien der Empfehlung der EU-Kommission vom 6. Mai 2003 (2003/361/EG).</span></label>
+
+</fieldset>
+<fieldset><legend>Unternehmenskennzahlen</legend>
+  <label>Unternehmenstyp<select name="Unternehmenstyp" required><option value="">Bitte auswählen …</option><option>eigenständiges Unternehmen</option><option>Partnerunternehmen</option><option>verbundenes Unternehmen</option></select></label>
+
+  <div class="drei"><label>Anzahl der Beschäftigten<input name="Anzahl der Beschäftigten" type="number" required></label><label>Jahresbilanzsumme in Euro<input name="Jahresbilanzsumme in Euro" type="text" required></label><label>Jahresumsatz in Euro<input name="Jahresumsatz in Euro" type="text" required></label></div>
+</fieldset>
+<fieldset><legend>Bankverbindung und Steuer</legend>
+  <div class="zwei"><label>Kontoinhaber<input name="Kontoinhaber" type="text" required></label><label>IBAN<input name="IBAN" type="text" required></label></div>
+  <label>Umsatzsteuer-ID<input name="Umsatzsteuer-ID" type="text" required></label>
+
+</fieldset>
+<fieldset><legend>Ergänzungen</legend>
+  <label>Ergänzende Hinweise<textarea name="Ergänzende Hinweise" rows="3"></textarea></label>
+
+  <label>Weitere Dateien, z. B. Bestätigung über ein Informationsgespräch (optional)<input name="anlagen[]" type="file" accept=".pdf,.jpg,.jpeg,.png" multiple></label>
+</fieldset>
+<label class="wahl"><input type="checkbox" name="Datenschutz akzeptiert" value="ja" required> <span>Ich akzeptiere die <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</span></label>
+<label class="wahl"><input type="checkbox" name="AGB akzeptiert" value="ja" required> <span>Ich akzeptiere die <a href="/agb/" target="_blank">AGB</a>.</span></label>
+<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<button class="btn-cta" type="submit">Anfrage absenden</button>
+<p class="status" role="status"></p>
+</form>
