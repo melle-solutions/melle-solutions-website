@@ -294,6 +294,13 @@ header{position:sticky}
   .nav-cta .nav-cta-txt b{font-size:14px}
 }
 @media(max-width:420px){ .brand-txt small{display:none} .nav-cta .chk{display:none} }
+/* Kopf auf schmalen Bildschirmen: nichts darf sich überlagern (14.11.2026) */
+.brand{min-width:0}
+.brand-txt b{white-space:nowrap}
+.nav-cta,.burger{flex-shrink:0}
+.nav-cta .nav-cta-txt b{white-space:nowrap}
+@media(max-width:620px){ .brand-txt small{display:none} .brand-txt b{font-size:16px} .mark{width:40px; height:40px} .nav-cta .chk{display:none} }
+@media(max-width:440px){ .brand-txt{display:none} }
 /* Videos: erst beim Klick laden (Datensparsamkeit), 16:9 */
 .video{position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:var(--hero); margin:12px 0 4px}
 .video iframe,.video video{position:absolute; inset:0; width:100%; height:100%; border:0; background:#000}
@@ -364,6 +371,8 @@ header{position:sticky}
 .sicher-icon{font-size:26px; line-height:1}
 .sicher-punkt h3{margin-top:12px; font-size:18px}
 .sicher-punkt p{margin:10px 0 0}
+@media(min-width:1100px){ .sicher-grid{grid-template-columns:repeat(4,1fr)} }
+@media(min-width:861px) and (max-width:1099px){ .sicher-grid{grid-template-columns:repeat(2,1fr)} }
 @media(max-width:860px){ .sicher-grid{grid-template-columns:1fr} }
 /* Ergebnis-Leiste unter dem Kopf */
 .ergebnisse{text-decoration:none; color:inherit; position:relative; padding-bottom:44px}
@@ -532,3 +541,6 @@ section.hero{padding-block:0}
 .einw-knoepfe .einw-link{background:none; border:0; color:var(--teal); text-decoration:underline; min-width:0; padding:10px 6px; font-weight:700}
 .einw-knoepfe .einw-link:hover{background:none}
 @media(max-width:560px){ .einw{left:8px; right:8px; bottom:8px} .einw-in{padding:16px; font-size:14px} .einw-titel{font-size:16px} .einw-knoepfe button{flex:1; min-width:0; padding:10px 12px} .einw-knoepfe .einw-link{flex-basis:100%} }
+
+/* Empfehlung ohne Foto: Initialen im Kreis */
+.tm-initialen{display:grid; place-items:center; width:58px; height:58px; border-radius:50%; background:var(--teal); color:var(--lime); font-weight:800; font-size:19px}
