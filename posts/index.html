@@ -19,7 +19,7 @@ permalink: /posts/
     <div class="cards cards-3 blog-liste">
       {% for post in site.posts %}
       <a class="post" href="{{ post.url }}">
-        {% if post.image %}<img src="{{ post.image }}" alt="" loading="lazy">{% else %}<div class="post-thumb">✎</div>{% endif %}
+        {% if post.image %}<img src="{{ post.image }}" alt="" loading="lazy">{% else %}<div class="post-thumb" aria-hidden="true"></div>{% endif %}
         <span class="post-datum">{{ post.date | date: "%d.%m.%Y" }}</span>
         <h3>{{ post.title }}</h3>
         <span class="more">Weiterlesen →</span>

@@ -27,7 +27,7 @@ section{padding-block:clamp(50px,6.5vw,88px)}
 .chk{font-weight:900}
 
 /* Buttons */
-.btn-cta{background:var(--orange); color:#fff; font-weight:800; text-decoration:none;
+.btn-cta{background:var(--orange); color:var(--teal); font-weight:800; text-decoration:none;
   padding:15px 26px; border-radius:12px; font-size:16px; display:inline-flex; align-items:center; gap:9px;
   box-shadow:0 6px 18px rgba(255,118,0,.28)}
 .btn-cta:hover{filter:brightness(1.05)}
@@ -158,7 +158,7 @@ header{background:#fff; border-bottom:1px solid var(--line); position:sticky; to
 .steps{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:8px}
 @media(max-width:760px){ .steps{grid-template-columns:1fr} }
 .step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:26px}
-.step .no{font-weight:900; color:var(--orange); font-size:34px; line-height:1; margin-bottom:8px}
+.step .no{font-weight:900; color:var(--teal); font-size:34px; line-height:1; margin-bottom:8px}
 .step h3{margin-bottom:8px}
 
 /* FAQ */
@@ -166,7 +166,7 @@ header{background:#fff; border-bottom:1px solid var(--line); position:sticky; to
 details{background:#fff; border:1px solid var(--line); border-radius:12px; padding:2px 20px}
 summary{cursor:pointer; font-weight:700; color:var(--teal); padding:15px 0; list-style:none}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+"; float:right; color:var(--orange); font-weight:900}
+summary::after{content:"+"; float:right; color:var(--teal); font-weight:900}
 details[open] summary::after{content:"–"}
 details p{padding-bottom:16px; color:var(--muted)}
 .muted-note{margin-top:18px; color:var(--muted)}
@@ -185,7 +185,7 @@ input,textarea{font:inherit; color:var(--ink); background:var(--paper-2);
   border:1px solid var(--line); border-radius:10px; padding:12px 14px; width:100%}
 input:focus,textarea:focus{outline:2px solid var(--teal); outline-offset:1px; background:#fff}
 .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
-.submit{background:var(--orange); color:#fff; border:0; font-weight:800; padding:14px 24px;
+.submit{background:var(--orange); color:var(--teal); border:0; font-weight:800; padding:14px 24px;
   border-radius:12px; cursor:pointer; font-size:15px; display:inline-flex; align-items:center; gap:8px}
 .submit:hover{filter:brightness(1.05)}
 .submit:disabled{opacity:.6; cursor:default}
@@ -199,7 +199,7 @@ input:focus,textarea:focus{outline:2px solid var(--teal); outline-offset:1px; ba
 .post img,.post-thumb{width:100%; height:180px; object-fit:cover}
 .post-thumb{display:grid; place-items:center; font-size:48px; background:var(--hero)}
 .post h3{padding:16px 20px 0; font-size:18px}
-.post .more{display:inline-block; padding:12px 20px 18px; color:var(--orange); font-weight:800; font-size:14px}
+.post .more{display:inline-block; padding:12px 20px 18px; color:var(--teal); text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:2px; text-underline-offset:4px; font-weight:800; font-size:14px}
 
 /* Fuß */
 footer{background:#0f2a26; color:#c7d6d2; font-size:14px}
@@ -350,7 +350,7 @@ header{position:sticky}
 .zeitleiste .cases{background:linear-gradient(var(--line),var(--line)) 0 7px/100% 2px no-repeat}
 .wann{position:absolute; top:-18px; left:22px; display:flex; align-items:center; gap:8px}
 .wann span{background:var(--teal); color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:999px}
-.wann b{background:var(--orange); color:#fff; font-size:11px; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; letter-spacing:.05em}
+.wann b{background:var(--orange); color:var(--teal); font-size:11px; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; letter-spacing:.05em}
 .zeitleiste-hinweis{margin:-14px 0 18px; font-size:13px; color:var(--muted)}
 .case .video-hoch{max-width:230px; margin:12px auto 4px}
 .video-copy{margin:4px 0 0; font-size:11.5px; color:var(--muted); text-align:right}
@@ -377,7 +377,7 @@ header{position:sticky}
 /* Ergebnis-Leiste unter dem Kopf */
 .ergebnisse{text-decoration:none; color:inherit; position:relative; padding-bottom:44px}
 .ergebnisse .feat{flex-direction:column; gap:4px}
-.ergebnisse .zahl{font-size:28px; font-weight:900; color:var(--orange); line-height:1.1; white-space:nowrap}
+.ergebnisse .zahl{font-size:28px; font-weight:900; color:var(--teal); line-height:1.1; white-space:nowrap}
 .ergebnisse .feat h3{margin:0}
 .ergebnisse-mehr{position:absolute; right:22px; bottom:12px; font-size:13px; font-weight:800; color:var(--accent)}
 .ergebnisse:hover .ergebnisse-mehr{text-decoration:underline}
@@ -517,7 +517,7 @@ section.hero{padding-block:0}
 .vcard h2{font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:26px 0 10px}
 .vcard-knopf{display:block; padding:13px 16px; margin:8px 0; border-radius:12px; border:1px solid var(--line); background:#fff; color:var(--teal); font-weight:800; text-decoration:none}
 .vcard-knopf:hover{border-color:var(--teal)}
-.vcard-knopf.haupt{background:var(--orange); border-color:var(--orange); color:#fff}
+.vcard-knopf.haupt{background:var(--orange); border-color:var(--orange); color:var(--teal)}
 .vcard-icons{display:flex; justify-content:center; gap:12px}
 .vcard-icons a{width:46px; height:46px; display:grid; place-items:center; border-radius:50%; background:var(--paper-2); font-size:20px; font-weight:900; color:var(--teal); text-decoration:none}
 .vcard-qr{margin:0 auto}
@@ -561,3 +561,98 @@ section.hero{padding-block:0}
 .karte-bild:hover .karte-hinweis{background:var(--teal)}
 .karte-quelle{position:absolute; right:0; bottom:0; background:rgba(255,255,255,.85); color:#333; font-size:10.5px; padding:2px 6px; border-top-left-radius:6px}
 .karte-quelle a{color:inherit}
+
+/* 90 · CD-Treue: Schrift auf Orange ist Teal; Orange auf hellem Grund nur als Markierung */
+.step .no{display:inline-block; background:linear-gradient(transparent 58%, rgba(150,255,56,.55) 0); padding:0 4px}
+.ergebnisse .zahl{background:linear-gradient(transparent 62%, rgba(255,118,0,.28) 0); align-self:flex-start; padding:0 3px}
+.btn-cta:hover,.submit:hover{filter:none; background:#ff8a24}
+.video-start .play{color:var(--teal)}
+
+/* 91 · Rhythmus und Markenakzent: Lime-Strich vor jedem Bereichstitel, mehr Luft zwischen den Bereichen */
+section{padding-block:clamp(58px,7.2vw,104px)}
+.kicker{display:flex; align-items:center; gap:12px; color:var(--teal); opacity:.78}
+.kicker::before{content:""; flex:0 0 26px; height:4px; border-radius:4px; background:var(--lime)}
+.band .kicker,.hero .kicker,#kontakt .kicker{color:#cfe0db; opacity:1}
+h2{letter-spacing:-.02em; line-height:1.12}
+h2 + .lede,h2 + p{margin-top:14px}
+.center .kicker{justify-content:center}
+.gegruendet .kicker{justify-content:center}
+
+/* 92 · Sicherheits-Symbole: einheitliche Linien-Icons, Lime auf Teal */
+.sicher-icon{width:52px; height:52px; border-radius:14px; background:var(--teal); color:var(--lime); display:grid; place-items:center}
+.sicher-icon svg{width:26px; height:26px}
+.sicher-punkt{transition:transform .2s, box-shadow .2s}
+.sicher-punkt:hover{transform:translateY(-3px); box-shadow:0 14px 34px rgba(17,50,44,.10)}
+.sicher-punkt h3{margin-top:16px}
+
+/* 93 · Prozess-Schritte: Ziffern als Marken-Plaketten, verbunden durch eine Linie */
+.schritte-oben{background:linear-gradient(180deg,#fff 0,var(--paper-2) 100%)}
+.steps-3{position:relative; margin-top:44px}
+@media(min-width:761px){ .steps-3::before{content:""; position:absolute; left:40px; right:40px; top:0; border-top:2px dashed rgba(26,56,56,.22); z-index:0} }
+.schritte-oben .step{position:relative; z-index:1; background:#fff; padding-top:46px; box-shadow:0 10px 30px rgba(17,50,44,.06); transition:transform .2s, box-shadow .2s}
+.schritte-oben .step:hover{transform:translateY(-3px); box-shadow:0 16px 38px rgba(17,50,44,.10)}
+.schritte-oben .step .no{position:absolute; top:-26px; left:24px; width:52px; height:52px; padding:0; border-radius:50%;
+  background:var(--teal); color:var(--lime); font-size:19px; display:grid; place-items:center; box-shadow:0 0 0 6px #fff}
+.schritte-oben .step:last-child .no{background:var(--lime); color:var(--teal)}
+
+/* 94 · Blog-Karten: echte Titelbilder, sanfte Bewegung, markengerechter Ersatz ohne Symbol */
+.post{overflow:hidden; transition:transform .2s, box-shadow .2s}
+.post:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(17,50,44,.12)}
+.post img{transition:transform .5s}
+.post:hover img{transform:scale(1.04)}
+.post h3{padding:18px 20px 0; line-height:1.3}
+.post-thumb{font-size:0; background:radial-gradient(circle at 25% 30%, rgba(150,255,56,.35), transparent 45%), radial-gradient(circle at 80% 80%, rgba(150,255,56,.18), transparent 40%), var(--teal)}
+
+/* 95 · FAQ: zweispaltig, Fragen als ruhige Karten mit Lime-Plus */
+.faq-raster{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.7fr); gap:clamp(28px,5vw,72px); align-items:start}
+@media(max-width:860px){ .faq-raster{grid-template-columns:1fr} }
+.faq-kopf .muted-note{margin-top:16px; color:var(--muted); font-size:15px}
+.faq-kopf .muted-note a{color:var(--teal); font-weight:700; text-decoration-color:var(--lime); text-decoration-thickness:2px; text-underline-offset:3px}
+.faq{gap:12px}
+.faq details{border-radius:14px; padding:0 22px; transition:box-shadow .2s, border-color .2s}
+.faq details[open]{border-color:transparent; box-shadow:0 12px 32px rgba(17,50,44,.09), inset 4px 0 0 var(--lime)}
+.faq summary{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; font-weight:700; color:var(--teal); font-size:16.5px}
+.faq summary::after{content:"+"; float:none; flex:0 0 30px; height:30px; border-radius:50%; background:var(--paper-2); color:var(--teal);
+  display:grid; place-items:center; font-size:20px; line-height:1; transition:transform .25s, background .2s}
+.faq details[open] summary::after{content:"+"; transform:rotate(45deg); background:var(--lime)}
+.faq details p{margin:0; padding:0 0 20px; line-height:1.65}
+
+/* 96 · Abschluss-Band greift den Hero auf: Raster, Lime-Licht, Lime-Kante oben */
+section.band{position:relative; overflow:hidden;
+  background:
+    radial-gradient(50% 70% at 50% 0%, rgba(150,255,56,.16), transparent 65%),
+    repeating-linear-gradient(90deg, rgba(150,255,56,.045) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(0deg, rgba(150,255,56,.045) 0 1px, transparent 1px 48px),
+    var(--hero)}
+section.band::before{content:""; position:absolute; left:0; right:0; top:0; height:4px; background:linear-gradient(90deg,transparent,var(--lime) 50%,transparent)}
+.band .eyebrow{display:inline-block; border:1px solid rgba(150,255,56,.45); color:var(--lime); border-radius:999px; padding:5px 14px; font-weight:700; letter-spacing:.04em}
+.band .haltung-dunkel{font-size:clamp(19px,2vw,24px)}
+.band .btn-cta{box-shadow:0 10px 30px rgba(255,118,0,.35)}
+
+/* 97 · Fuß: drei Spalten (Marke, Kontakt, Angebote) und eine Rechtsleiste */
+footer{background:#0f2a26; color:#c7d6d2; font-size:14.5px; border-top:4px solid var(--lime)}
+footer .wrap.fuss-raster{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:32px 48px; align-items:start; padding-block:52px 40px}
+@media(max-width:760px){ footer .wrap.fuss-raster{grid-template-columns:1fr; gap:28px} }
+.fuss-marke .mark{width:44px; height:44px; margin-bottom:14px}
+.fuss-marke p{margin:0 0 10px; line-height:1.55}
+.fuss-claim{font-style:italic; color:#9fb5b0; max-width:34ch}
+.fuss-titel{margin:0 0 12px; color:#fff; font-weight:800; font-size:13px; letter-spacing:.1em; text-transform:uppercase}
+.fuss-liste{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+footer .fuss-liste a{color:#dbe7e4; text-decoration:none; border-bottom:1px solid transparent}
+footer .fuss-liste a:hover{color:var(--lime); border-bottom-color:var(--lime)}
+.fuss-unten{border-top:1px solid rgba(255,255,255,.08)}
+.fuss-unten .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 24px; padding-block:18px; font-size:13px; color:#8aa39d}
+.fuss-unten .fuss-nav{padding:0}
+
+/* 98 · Handy-Feinschliff */
+.karte-bild{font:inherit}
+@media(max-width:560px){
+  .karte-hinweis{left:8px; bottom:26px; font-size:13px; padding:7px 12px}
+  .karte-hinweis small{display:none}
+  footer .wrap.fuss-raster{grid-template-columns:1fr 1fr; gap:28px 20px; padding-block:40px 28px}
+  .fuss-marke{grid-column:1 / -1}
+  .fuss-liste{font-size:14px}
+  .fuss-unten .wrap{flex-direction:column; align-items:flex-start}
+  .schritte-oben .step .no{width:46px; height:46px; top:-23px; font-size:17px}
+  section{padding-block:clamp(48px,12vw,64px)}
+}
