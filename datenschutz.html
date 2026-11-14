@@ -6,11 +6,11 @@
   <title>Datenschutz – Melle Solutions</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7600'/%3E%3Ctext x='32' y='45' font-family='sans-serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23122a2a'%3E%E3%82%B9%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=106">
+  <link rel="stylesheet" href="css/style.css?v=107">
   <!-- Einwilligung: eigenes Banner (js/einwilligung.js); Hotjar und Leadinfo starten erst nach Zustimmung -->
   <script type="text/plain" data-einwilligung="hotjar" src="/js/hotjar.js"></script>
   <script type="text/plain" data-einwilligung="leadinfo" src="/js/leadinfo.js"></script>
-  <script defer src="/js/einwilligung.js?v=106"></script>
+  <script defer src="/js/einwilligung.js?v=107"></script>
 </head>
 <body>
 
@@ -18,7 +18,14 @@
   <div class="wrap nav">
     <a class="brand" href="index.html"><img class="mark" src="assets/logo-melle.svg" alt="Melle Solutions" width="46" height="46"><span class="brand-txt"><b>Melle Solutions</b><small>melle.com.de</small></span></a>
     <nav class="menu" id="hauptmenue">
-      <a href="index.html#schritte">Leistungen</a>
+      <div class="menu-gruppe">
+        <button type="button" class="menu-auf" aria-expanded="false" aria-controls="menu-leistungen">Leistungen <span class="pfeil" aria-hidden="true">▾</span></button>
+        <div class="menu-unter" id="menu-leistungen">
+          <a href="/#schritte"><b>Workshop &amp; Umsetzung</b><small>Von der Idee zur laufenden Lösung</small></a>
+          <a href="/ki-beirat/"><b>KI-Beirat</b><small>Sparringspartner für die Geschäftsführung</small></a>
+          <a href="/miete/"><b>Miete deine App</b><small>Abläufe und Apps zur Miete</small></a>
+        </div>
+      </div>
       <a href="index.html#projekte">Kundengeschichten</a>
       <a href="index.html#warum">Über mich</a>
       <a href="/posts/">Blog</a>
@@ -109,6 +116,6 @@
     <div class="wrap"><span>© 2026 Melle Solutions GmbH · HRB 519349</span><nav class="fuss-nav" aria-label="Rechtliches"><a href="/agb/">AGB</a><a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a><a href="#" data-einwilligung-oeffnen>Cookie-Einstellungen</a></nav></div>
   </div>
 </footer>
-<script src="js/menu.js?v=106"></script>
+<script src="js/menu.js?v=107"></script>
 </body>
 </html>
