@@ -656,3 +656,9 @@ footer .fuss-liste a:hover{color:var(--lime); border-bottom-color:var(--lime)}
   .schritte-oben .step .no{width:46px; height:46px; top:-23px; font-size:17px}
   section{padding-block:clamp(48px,12vw,64px)}
 }
+
+/* Ankreuz- und Auswahlkästchen nicht von der allgemeinen Eingabefeld-Regel strecken lassen (BAFA, Netzwerk, lists) */
+input[type=checkbox],input[type=radio]{width:18px; height:18px; padding:0; margin:3px 0 0; border:0; background:none; flex:0 0 18px; accent-color:var(--teal); cursor:pointer}
+.formular .wahl{line-height:1.5; cursor:pointer}
+.formular .wahl span{flex:1 1 auto; min-width:0}
+.einw-auswahl label{font-weight:400}
