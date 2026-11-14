@@ -742,3 +742,64 @@ input[type=checkbox],input[type=radio]{width:18px; height:18px; padding:0; margi
 /* Abschluss-Band: Redensart und Erläuterung getrennt, Erläuterung größer */
 .haltung-dunkel cite{font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--lime); opacity:.85}
 .haltung-erklaer{max-width:52ch; margin:22px auto 6px; padding-top:22px; border-top:1px solid rgba(150,255,56,.25); font-size:clamp(17px,1.6vw,20px); line-height:1.55; color:#e6f0ed; font-weight:600}
+.zahl-zaehler{display:inline-block; min-width:2ch; text-align:right; font-variant-numeric:tabular-nums}
+/* Einmalige Wisch-Aufdeckung von unten (Videokarte „Warum mit mir“), ausgelöst über data-sc-in */
+.js .wisch-rahmen .wisch{clip-path:inset(100% -60px -60px -60px); transition:clip-path 700ms cubic-bezier(.22,1,.36,1)}
+.js .wisch-rahmen.sc-in .wisch{clip-path:inset(-60px -60px -60px -60px)}
+@media (prefers-reduced-motion: reduce){ .js .wisch-rahmen .wisch{clip-path:none; transition:none} }
+/* 124 · Zeiger-Lichtfleck auf den Sicherheits-Karten (nur Maus): Lime, dezent, hinter der Schrift */
+.sicher-punkt[data-sc-spotlight]::after{z-index:0; border-radius:inherit;
+  background:radial-gradient(220px 220px at calc(var(--sc-mx, .5) * 100%) calc(var(--sc-my, .5) * 100%), rgba(150,255,56,.11), transparent 70%);
+  transition:opacity 200ms ease-out}
+.sicher-punkt[data-sc-spotlight] > *{position:relative; z-index:1}
+@media (max-width:767px){ .hero-img img[data-sc-parallax]{transform:none !important} }
+/* 126 · Abschluss-Band: Wörter der Überschrift laufen einmal ein */
+.wort-bereit .wort{display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 400ms ease-out, transform 400ms cubic-bezier(.22,1,.36,1)}
+.wort-bereit.wort-los .wort{opacity:1; transform:none}
+/* 127 · Brücke zum Termin unter den Kundengeschichten: Textlink, kein zweiter oranger Knopf */
+.bruecke{margin:34px 0 0; text-align:center; font-size:17px}
+.bruecke a{color:var(--teal); text-decoration:none}
+.bruecke b{text-decoration:underline; text-decoration-color:var(--lime); text-decoration-thickness:3px; text-underline-offset:5px}
+.bruecke a:hover b{background:linear-gradient(transparent 60%, rgba(150,255,56,.4) 0)}
+/* 127b · Brücke gehört zum Karussell: weniger Luft darunter */
+#projekte{padding-bottom:max(28px, calc(clamp(58px,7.2vw,104px) - 30px))}
+/* 128 · Stimmen: Lime-Markierung wird einmal von links nach rechts eingezeichnet */
+.js .tm blockquote strong{background-repeat:no-repeat; background-size:0% 100%; transition:background-size 600ms cubic-bezier(.22,1,.36,1) 250ms}
+.js .tm.marker-los blockquote strong{background-size:100% 100%}
+@media (prefers-reduced-motion: reduce){ .js .tm blockquote strong{background-size:100% 100%; transition:none} }
+/* 129 · Häufige Fragen: Antwort klappt weich auf (moderne Browser; sonst wie bisher sofort) */
+.faq details{interpolate-size:allow-keywords}
+.faq details::details-content{block-size:0; overflow:hidden; opacity:0;
+  transition:block-size 260ms cubic-bezier(.22,1,.36,1), opacity 260ms ease-out, content-visibility 260ms allow-discrete}
+.faq details[open]::details-content{block-size:auto; opacity:1}
+@media (prefers-reduced-motion: reduce){ .faq details::details-content{transition:none} }
+/* 130 · Kontaktformular: Hürden senken */
+.optional{font-weight:500; color:var(--muted); font-size:.9em}
+#nachricht::placeholder{color:#7c8d89; opacity:1}
+/* 131 · Datenschutzhinweis direkt unter „Jetzt absenden“ */
+.form-hinweis{margin:12px 0 0; font-size:13px; line-height:1.5; color:var(--muted)}
+.form-hinweis a{color:var(--teal); text-decoration-color:var(--lime); text-decoration-thickness:2px; text-underline-offset:3px}
+/* 131b · Kontrast für kleine Schrift im Formular ≥ 4,5:1 */
+.optional,.form-hinweis{color:#5a6b67}
+#nachricht::placeholder{color:#5a6b67}
+.bruecke a{text-wrap:balance}
+.bruecke b{white-space:nowrap}
+/* 133 · Handy: Porträt niedriger (Kopf und Schultern), damit „26 Std.“ früher im Bild ist; Datenzeile wieder sichtbar */
+@media(max-width:767px){
+  .hero-img img{height:190px; max-height:190px; width:100%; object-fit:cover; object-position:50% 4%}
+  .hero-trust li:last-child{display:list-item}
+}
+/* 136 · Play-Knöpfe in Lime statt Orange – Orange bleibt dem Termin vorbehalten */
+.video-start .play{background:var(--lime); color:var(--teal); box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.video-start:hover .play,.video-start:focus-visible .play{box-shadow:0 0 0 6px rgba(150,255,56,.28), 0 8px 24px rgba(0,0,0,.35)}
+.video-start:hover .play{transform:none}
+/* 137 · Sprungziele frei unter dem festen Kopf; „NEU“-Etikett in Lime */
+#stimmen{scroll-margin-top:118px}
+[id^="video-"]{scroll-margin-top:96px}
+.wann b{background:var(--lime); color:var(--teal)}
+/* 139 · „Warum mit mir“: Text und Video als Paar zusammengerückt (ab 1024 px), weiter vertikal zentriert */
+@media(min-width:1024px){ .warum-kopf{grid-template-columns:minmax(0,470px) 260px; justify-content:center; gap:64px} .warum-kopf .lede,.warum-kopf .video-erklaer{max-width:none} }
+/* 141 · Deutlicher Tastatur-Fokus nach CD: Teal auf hellem, Lime auf dunklem Grund */
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--teal); outline-offset:3px; border-radius:6px}
+.hero :focus-visible,.band :focus-visible,footer :focus-visible,.miete-dunkel :focus-visible,.miete-abschluss :focus-visible{outline-color:var(--lime)}
+.btn-cta:focus-visible,.submit:focus-visible{outline-offset:4px}

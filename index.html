@@ -11,11 +11,15 @@
   <meta property="og:url" content="https://www.melle.com.de/">
   <meta name="theme-color" content="#11322c">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7600'/%3E%3Ctext x='32' y='45' font-family='sans-serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23122a2a'%3E%E3%82%B9%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=110">
+  <link rel="stylesheet" href="css/style.css?v=141">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="assets/vendor/scrollcraft/scrollcraft-auszug.css?v=141">
+  <script defer src="assets/vendor/scrollcraft/scrollcraft.js?v=141"></script>
+  <script defer src="js/scroll.js?v=141"></script>
   <!-- Einwilligung: eigenes Banner (js/einwilligung.js); Hotjar und Leadinfo starten erst nach Zustimmung -->
   <script type="text/plain" data-einwilligung="hotjar" src="/js/hotjar.js"></script>
   <script type="text/plain" data-einwilligung="leadinfo" src="/js/leadinfo.js"></script>
-  <script defer src="/js/einwilligung.js?v=110"></script>
+  <script defer src="/js/einwilligung.js?v=141"></script>
 </head>
 <body>
 
@@ -40,14 +44,14 @@
     </nav>
     <a class="btn-cta nav-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener">
       <span class="chk">✓</span>
-      <span class="nav-cta-txt"><b>Erstgespräch buchen</b><small>15 Min. · kostenlos · direkt im Kalender</small></span>
+      <span class="nav-cta-txt"><b>15-Min-Gespräch buchen</b><small>kostenlos · direkt im Kalender</small></span>
     </a>
     <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptmenue"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="top">
+<section class="hero" id="top" data-sc-act="flow">
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="pill"><span class="chk teal">✓</span> Ihr eigener Weg ins KI-Zeitalter – persönlich begleitet</span>
@@ -61,7 +65,7 @@
       </ul>
     </div>
     <div class="hero-img">
-      <img src="assets/mario-melle.png" alt="Mario Melle" loading="eager">
+      <img src="assets/mario-melle.png" alt="Mario Melle" loading="eager" fetchpriority="high" data-sc-parallax="0.48">
     </div>
   </div>
 </section>
@@ -70,7 +74,7 @@
 <div class="features-wrap">
   <div class="wrap">
     <a class="features ergebnisse" href="#projekte">
-      <div class="feat"><b class="zahl">26 Std.</b><div><h3>pro Woche gespart</h3><p>KI liest Lieferabrufe aus E-Mails – kein Abtippen mehr.</p></div></div>
+      <div class="feat"><b class="zahl"><span class="zahl-zaehler" data-ziel="26">26</span> Std.</b><div><h3>pro Woche gespart</h3><p>KI liest Lieferabrufe aus E-Mails – kein Abtippen mehr.</p></div></div>
       <div class="feat"><b class="zahl">6 Wo. → 2 Std.</b><div><h3>für 1.000 SEO-Texte</h3><p>Ein Onlineshop schreibt seine Produkttexte automatisch.</p></div></div>
       <div class="feat"><b class="zahl">1 Diktat</b><div><h3>statt Papierkram</h3><p>Das Bautagebuch füllt sich per Sprache – mit Fotos und Unterschrift.</p></div></div>
       <span class="ergebnisse-mehr">So haben wir das gemacht →</span>
@@ -83,7 +87,7 @@
   <div class="wrap">
     <span class="kicker">So arbeiten wir zusammen</span>
     <h2>In 3 Schritten von der Idee zur laufenden Lösung</h2>
-    <div class="steps steps-3">
+    <div class="steps steps-3" data-sc-in data-sc-stagger="120">
       <div class="step"><div class="no">01</div><h3>15 Minuten kennenlernen</h3><p>Kostenlos und unverbindlich: Sie schildern, wo es hakt, ich sage Ihnen ehrlich, ob und wie KI dabei hilft.</p><a class="btn-sec" href="https://cal.melle.com.de" target="_blank" rel="noopener">Gespräch buchen →</a></div>
       <div class="step"><div class="no">02</div><h3>Workshop mit Ihrem Team</h3><p>Zwei Halbtage bei Ihnen vor Ort, mit bis zu 50 Mitarbeitern. Heraus kommen üblicherweise <strong>mehrere Dutzend Anwendungsfälle</strong>, priorisiert nach Wichtigkeit und Ertrag – als schriftliche Liste spätestens zehn Arbeitstage später. Sie wissen danach, womit Sie anfangen – und bekommen vorab ein schriftliches Angebot, das genau zu Ihrem Umfang passt.</p><p class="step-tipp"><b>Sie haben Ihre Anwendungsfälle schon?</b> Dann überspringen wir den Workshop und starten direkt mit Schritt 3.</p></div>
       <div class="step"><div class="no">03</div><h3>Umsetzen und begleiten</h3><p>Mein Team – erfahrene Entwickler aus der Region Jena – baut zuerst, was den größten Ertrag bringt. Am Ende haben Sie eine laufende Lösung in Ihrem Alltag, etwa so: <a href="#video-lieferabrufe">Lieferabrufe lesen sich selbst – 26 Std. pro Woche gespart</a>. Ich bleibe Ihr Ansprechpartner.</p></div>
@@ -156,6 +160,7 @@
       <button class="k-btn k-next" type="button" aria-label="Weitere Geschichten">›</button>
       <div class="k-dots" aria-hidden="true"></div>
     </div>
+    <p class="bruecke"><a href="https://cal.melle.com.de" target="_blank" rel="noopener">Ähnliches Potenzial in Ihrem Unternehmen? <b>15-Min-Gespräch&nbsp;buchen&nbsp;→</b></a></p>
   </div>
 </section>
 
@@ -165,22 +170,22 @@
     <span class="kicker">Sicher und zukunftsfest</span>
     <h2>Sicher arbeiten – heute und morgen</h2>
     <div class="sicher-grid">
-      <div class="sicher-punkt">
+      <div class="sicher-punkt" data-sc-spotlight>
         <div class="sicher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <h3>Frei arbeiten, weil es sich sicher anfühlt</h3>
         <p>Sensible Daten verarbeiten wir mit KI-Modellen, die lokal laufen – nicht in einer fremden Cloud. So arbeitet Ihr Team frei und ohne Bauchschmerzen.</p>
       </div>
-      <div class="sicher-punkt">
+      <div class="sicher-punkt" data-sc-spotlight>
         <div class="sicher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></svg></div>
         <h3>Nur, was Sie freigeben</h3>
         <p>Weitergegeben wird nur, was Sie freigeben – voreingestellt ist nichts. Und die Systeme raten nicht: Fehlt etwas, sagen sie es offen.</p>
       </div>
-      <div class="sicher-punkt">
+      <div class="sicher-punkt" data-sc-spotlight>
         <div class="sicher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M4 20v-4.5h4.5"/></svg></div>
         <h3>Unabhängig von einzelnen Modellen</h3>
         <p>Die Systeme sind hybrid: Sie arbeiten mit mehreren KI-Modellen, lokal wie in der Cloud. Steht ein Modell einmal nicht mehr zur Verfügung, läuft alles mit einem anderen weiter.</p>
       </div>
-      <div class="sicher-punkt">
+      <div class="sicher-punkt" data-sc-spotlight>
         <div class="sicher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
         <h3>Ein Gedächtnis, das mitwächst</h3>
         <p>Jedes Projekt baut Ihr Unternehmensgedächtnis aus: Wissen, Regeln und Abläufe, die die KI kennt. Es wächst mit – und gehört Ihnen.</p>
@@ -199,7 +204,7 @@
         <p class="lede warum-lede">Informatiker, Gründer und Coach: Hören Sie in 36 Sekunden selbst, wie ich arbeite.</p>
         <p class="video-erklaer"><b>Zum Video:</b> Das Interview entstand auf der Jahreskonferenz von Sanitätshaus Aktuell für die Mitglieder des Verbunds. Es ging um KI für den Verbund und für jedes einzelne Mitgliedsunternehmen.</p>
       </div>
-      <figure class="video-mit-copy"><div id="video-vorstellung" class="video video-dunkel video-hoch" data-name="vorstellung" data-video="https://iframe.mediadelivery.net/embed/353151/aaea8233-103e-44dc-b61a-b2697ab6e144?autoplay=true&amp;loop=false&amp;muted=false&amp;preload=true&amp;responsive=true"><button type="button" class="video-start" aria-label="Video abspielen: Mario Melle stellt sich vor"><span class="play" aria-hidden="true">▶</span><span class="video-titel">Mario Melle stellt sich vor</span><small>Video startet beim Klick</small></button></div><figcaption><span class="video-copy">Interview: © Sanitätshaus Aktuell</span></figcaption></figure>
+      <figure class="video-mit-copy wisch-rahmen"><div id="video-vorstellung" class="video video-dunkel video-hoch wisch" data-name="vorstellung" data-video="https://iframe.mediadelivery.net/embed/353151/aaea8233-103e-44dc-b61a-b2697ab6e144?autoplay=true&amp;loop=false&amp;muted=false&amp;preload=true&amp;responsive=true"><button type="button" class="video-start" aria-label="Video abspielen: Mario Melle stellt sich vor"><span class="play" aria-hidden="true">▶</span><span class="video-titel">Mario Melle stellt sich vor</span><small>Video startet beim Klick</small></button></div><figcaption><span class="video-copy">Interview: © Sanitätshaus Aktuell</span></figcaption></figure>
     </div>
     <div class="cards cards-3 story">
       <article class="card"><div class="no">Informatiker</div><h3>Ich weiß, was KI kann – und was nicht</h3><p>Diplom-Informatiker mit Vertiefung in künstlichen neuronalen Netzen und Machine Learning: KI begleitet mich seit dem Studium. Deshalb kann ich Ihnen ehrlich sagen, welche KI-Lösung trägt und welche nur gut klingt.</p></article>
@@ -317,7 +322,7 @@
   <div class="wrap narrow center bereit-solo">
     <div>
       <span class="eyebrow light">Kostenlos &amp; Unverbindlich</span>
-      <h2 class="on-dark">Sind Sie bereit für den nächsten Schritt?</h2>
+      <h2 class="on-dark wort-einlauf">Sind Sie bereit für den nächsten Schritt?</h2>
       <blockquote class="haltung haltung-dunkel">„Wir haben uns verirrt, kommen aber gut voran.“<cite>Amerikanische Redensart</cite></blockquote>
       <p class="haltung-erklaer">So fühlt sich KI gerade in vielen Unternehmen an. Ich sorge dafür, dass Tempo und Richtung zusammenpassen.</p>
       <p class="on-dark-sub nol">Warten auf Perfektion bremst Wachstum. In 15 Minuten klären wir, wo Sie stehen und was der nächste sinnvolle Schritt ist.</p>
@@ -355,10 +360,11 @@
       <h3 class="form-title">Kontaktanfrage</h3>
       <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
       <div class="field"><label for="email">E-Mail-Adresse</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="telefon">Telefonnummer</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="field"><label for="nachricht">Persönliche Nachricht</label><textarea id="nachricht" name="nachricht" rows="4" required></textarea></div>
+      <div class="field"><label for="telefon">Telefonnummer <span class="optional">(optional)</span></label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="nachricht">Persönliche Nachricht</label><textarea id="nachricht" name="nachricht" rows="4" required placeholder="Zum Beispiel: Wir tippen jede Woche Lieferabrufe ab und wollen wissen, ob KI das übernehmen kann."></textarea></div>
       <div class="hp" aria-hidden="true"><label for="website">Website (frei lassen)</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
       <button class="submit" type="submit"><span class="chk">✓</span> Jetzt absenden</button>
+      <p class="form-hinweis">Ihre Angaben verwende ich, um Ihre Anfrage zu bearbeiten. Details, auch zur Speicherdauer, in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
       <p class="status" id="status" role="status"></p>
     </form>
   </div>
@@ -410,9 +416,9 @@
   </div>
 </footer>
 
-<script src="js/form.js?v=110"></script>
-<script src="js/karussell.js?v=110"></script>
-<script src="js/video.js?v=110"></script>
-<script src="js/menu.js?v=110"></script>
+<script src="js/form.js?v=141"></script>
+<script src="js/karussell.js?v=141"></script>
+<script src="js/video.js?v=141"></script>
+<script src="js/menu.js?v=141"></script>
 </body>
 </html>
