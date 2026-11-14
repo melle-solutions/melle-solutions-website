@@ -544,3 +544,10 @@ section.hero{padding-block:0}
 
 /* Empfehlung ohne Foto: Initialen im Kreis */
 .tm-initialen{display:grid; place-items:center; width:58px; height:58px; border-radius:50%; background:var(--teal); color:var(--lime); font-weight:800; font-size:19px}
+
+/* Vorstellungsvideo: Erläuterung + © + Link-Knopf direkt unter dem Video (14.11.2026) */
+.video-mit-copy figcaption{margin-top:8px}
+.warum-kopf .video-erklaer{max-width:46ch; margin:18px 0 0; padding-left:14px; border-left:3px solid var(--lime); font-size:15px; line-height:1.55; color:var(--muted)}
+.warum-kopf .video-erklaer b{color:var(--teal)}
+.video-mit-copy figcaption .video-copy{display:block; margin-top:4px}
+.video-mit-copy .video-link{display:block; margin:10px auto 0}

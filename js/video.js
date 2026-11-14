@@ -64,7 +64,10 @@
       var basis = location.origin + location.pathname.replace(/index\.html$/, "");
       kopieren(basis + "#" + box.id, knopf);
     });
-    var ziel = box.closest("figure") || box;
+    var fig = box.closest("figure.video-mit-copy");
+    // Im Video-Rahmen (figure): Knopf ans Ende, unter Erläuterung und ©, damit er beim Video bleibt
+    if (fig) { fig.appendChild(knopf); return; }
+    var ziel = box;
     // Hinweise direkt unter dem Video (©, „frei erfunden“) bleiben am Video, der Knopf kommt darunter
     while (ziel.nextElementSibling && ziel.nextElementSibling.classList.contains("video-copy")) ziel = ziel.nextElementSibling;
     ziel.insertAdjacentElement("afterend", knopf);
