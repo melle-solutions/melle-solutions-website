@@ -711,3 +711,4 @@ input[type=checkbox],input[type=radio]{width:18px; height:18px; padding:0; margi
 .miete-bausteine{grid-template-columns:repeat(2,1fr)}
 @media(max-width:760px){ .miete-bausteine{grid-template-columns:1fr} }
 .miete-app{border:2px solid var(--lime)}
+.vcard-foto,.vcard-qr{display:block; margin-inline:auto}
