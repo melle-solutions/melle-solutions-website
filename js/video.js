@@ -30,18 +30,15 @@
   });
 })();
 
-// Karte im Kontaktbereich: Google Maps wird erst geladen, wenn jemand „Karte anzeigen" anklickt.
+// Karte im Kontaktbereich: Sofort sichtbar ist ein selbst gehostetes Kartenbild (OpenStreetMap, keine Datenübertragung).
+// Google Maps wird erst geladen, wenn jemand auf das Bild klickt.
 (function () {
-  var knopf = document.querySelector(".karte-link"), box = document.getElementById("karte");
-  if (!knopf || !box) return;
-  knopf.addEventListener("click", function () {
-    var auf = box.hidden;
-    if (auf && !box.firstChild) {
-      var f = document.createElement("iframe");
-      f.src = box.getAttribute("data-src"); f.title = "Karte: August-Bebel-Straße 27b, Jena"; f.loading = "lazy";
-      box.appendChild(f);
-    }
-    box.hidden = !auf; knopf.setAttribute("aria-expanded", auf); knopf.textContent = auf ? "Karte ausblenden" : "Karte anzeigen";
+  var box = document.getElementById("karte"), bild = box && box.querySelector(".karte-bild");
+  if (!bild) return;
+  bild.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = box.getAttribute("data-src"); f.title = "Karte: August-Bebel-Straße 27b, Jena";
+    box.innerHTML = ""; box.appendChild(f); box.classList.add("live");
   });
 })();
 

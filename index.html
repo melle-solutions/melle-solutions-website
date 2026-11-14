@@ -11,11 +11,11 @@
   <meta property="og:url" content="https://www.melle.com.de/">
   <meta name="theme-color" content="#11322c">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7600'/%3E%3Ctext x='32' y='45' font-family='sans-serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23122a2a'%3E%E3%82%B9%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=80">
+  <link rel="stylesheet" href="css/style.css?v=81">
   <!-- Einwilligung: eigenes Banner (js/einwilligung.js); Hotjar und Leadinfo starten erst nach Zustimmung -->
   <script type="text/plain" data-einwilligung="hotjar" src="/js/hotjar.js"></script>
   <script type="text/plain" data-einwilligung="leadinfo" src="/js/leadinfo.js"></script>
-  <script defer src="/js/einwilligung.js?v=80"></script>
+  <script defer src="/js/einwilligung.js?v=81"></script>
 </head>
 <body>
 
@@ -329,9 +329,15 @@
       <ul class="contact-list on-dark-list">
         <li><b>Telefon</b><span><a href="tel:+491777885505">+49 177 788 5505</a></span></li>
         <li><b>E-Mail</b><span><a href="mailto:mario@melle.com.de">mario@melle.com.de</a></span></li>
-        <li><b>Adresse</b><span>August-Bebel-Straße 27b, 07743 Jena · <button type="button" class="karte-link" aria-controls="karte" aria-expanded="false">Karte anzeigen</button></span></li>
+        <li><b>Adresse</b><span>August-Bebel-Straße 27b, 07743 Jena</span></li>
       </ul>
-      <div class="karte" id="karte" hidden data-src="https://maps.google.com/maps?q=August-Bebel-Stra%C3%9Fe%2027b%2C%2007743%20Jena&amp;t=m&amp;z=15&amp;output=embed"></div>
+      <div class="karte" id="karte" data-src="https://maps.google.com/maps?q=August-Bebel-Stra%C3%9Fe%2027b%2C%2007743%20Jena&amp;t=m&amp;z=15&amp;output=embed">
+        <button type="button" class="karte-bild" aria-label="Interaktive Karte von Google Maps laden">
+          <img src="assets/karte/karte-august-bebel-27b.webp" alt="Kartenausschnitt Jena-West mit der August-Bebel-Straße 27b" width="1280" height="800" loading="lazy">
+          <span class="karte-hinweis">Interaktive Karte laden <small>(Google Maps – erst beim Klick)</small></span>
+        </button>
+        <span class="karte-quelle">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-Mitwirkende</a></span>
+      </div>
       <p class="kalender-link"><a href="https://cal.melle.com.de" target="_blank" rel="noopener">Lieber gleich einen Termin? Direkt im Kalender wählen →</a></p>
     </div>
     <form id="kontaktform" method="post" action="https://go.melle.com.de/formular.php">
@@ -371,9 +377,9 @@
   <div class="wrap"><nav class="fuss-nav" aria-label="Weitere Seiten"><a href="/ki-beirat/">KI-Beirat</a><a href="/bafa/">BAFA-Förderung</a><a href="/worklow-miete/">Miete deinen Workflow</a><a href="/network/">Netzwerk</a><a href="/vcard/">Kontaktkarte</a><a href="/posts/">Blog</a><a href="/agb/">AGB</a><a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a><a href="#" data-einwilligung-oeffnen>Cookie-Einstellungen</a></nav></div>
 </footer>
 
-<script src="js/form.js?v=80"></script>
-<script src="js/karussell.js?v=80"></script>
-<script src="js/video.js?v=80"></script>
-<script src="js/menu.js?v=80"></script>
+<script src="js/form.js?v=81"></script>
+<script src="js/karussell.js?v=81"></script>
+<script src="js/video.js?v=81"></script>
+<script src="js/menu.js?v=81"></script>
 </body>
 </html>

@@ -551,3 +551,13 @@ section.hero{padding-block:0}
 .warum-kopf .video-erklaer b{color:var(--teal)}
 .video-mit-copy figcaption .video-copy{display:block; margin-top:4px}
 .video-mit-copy .video-link{display:block; margin:10px auto 0}
+
+/* Kontakt-Karte: Bild sofort, Google erst beim Klick (14.11.2026) */
+.karte{position:relative}
+.karte-bild{display:block; width:100%; height:100%; padding:0; border:0; cursor:pointer; background:#e8ece9}
+.karte-bild img{display:block; width:100%; height:100%; object-fit:cover}
+.karte-hinweis{position:absolute; left:12px; bottom:12px; background:rgba(17,50,44,.88); color:#fff; font-weight:800; font-size:14px; padding:8px 14px; border-radius:999px}
+.karte-hinweis small{font-weight:600; opacity:.8}
+.karte-bild:hover .karte-hinweis{background:var(--teal)}
+.karte-quelle{position:absolute; right:0; bottom:0; background:rgba(255,255,255,.85); color:#333; font-size:10.5px; padding:2px 6px; border-top-left-radius:6px}
+.karte-quelle a{color:inherit}
