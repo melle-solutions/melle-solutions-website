@@ -34,16 +34,6 @@
   io.observe(band);
 })();
 
-// Stimmen: Markierung je Empfehlung einmal einzeichnen, sobald die Karte zur Hälfte sichtbar ist.
-(function () {
-  var karten = document.querySelectorAll('.tm');
-  if (!('IntersectionObserver' in window)) { karten.forEach(function (k) { k.classList.add('marker-los'); }); return; }
-  var io = new IntersectionObserver(function (eintraege) {
-    eintraege.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('marker-los'); io.unobserve(e.target); } });
-  }, { threshold: 0.5 });
-  karten.forEach(function (k) { io.observe(k); });
-})();
-
 // Zähler „26“: steht bis zum Start auf dem Endwert (nie eine Null als Aussage) und zählt erst,
 // wenn die Zahl selbst zu 60 % sichtbar ist. Reduzierte Bewegung: keine Animation.
 (function () {
@@ -65,30 +55,6 @@
   z.forEach(function (el) { io.observe(el); });
 })();
 
-// Stimmen: „Ganzes Zitat lesen“ nur zeigen, wenn der Text wirklich gekürzt ist; Klick klappt auf und zu.
-(function () {
-  var karten = document.querySelectorAll('.tm');
-  function pruefen() {
-    karten.forEach(function (k) {
-      var t = k.querySelector('.tm-voll'), b = k.querySelector('.tm-mehr');
-      if (!t || !b || k.classList.contains('offen')) return;
-      b.hidden = t.scrollHeight <= t.clientHeight + 2;
-    });
-  }
-  karten.forEach(function (k) {
-    var b = k.querySelector('.tm-mehr');
-    if (!b) return;
-    b.addEventListener('click', function () {
-      var auf = k.classList.toggle('offen');
-      b.setAttribute('aria-expanded', auf ? 'true' : 'false');
-      b.textContent = auf ? 'Weniger anzeigen' : 'Ganzes Zitat lesen';
-    });
-  });
-  pruefen();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(pruefen);
-  window.addEventListener('resize', pruefen);
-})();
-
 // Kundengeschichten: „Ganze Geschichte lesen“ nur, wenn die Geschichte gekürzt ist; Klick klappt auf und zu.
 (function () {
   var karten = document.querySelectorAll('.case');
@@ -96,7 +62,7 @@
     karten.forEach(function (k) {
       var t = k.querySelector('.case-mehr'), b = k.querySelector('.case-knopf');
       if (!t || !b || k.classList.contains('offen')) return;
-      var passt = t.scrollHeight <= t.clientHeight + 2;
+      var passt = k.querySelectorAll('.story3 dt').length <= 1 && !t.querySelector('.vergleich');
       b.hidden = passt; t.classList.toggle('passt', passt);
     });
   }

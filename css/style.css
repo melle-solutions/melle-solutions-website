@@ -902,3 +902,62 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .karussell .cases:has(.case.offen),.karussell .cases:has(.video.laeuft){align-items:start}
 .karussell .case .case-knopf{margin-top:auto; position:relative; top:2px}
 .karussell .case .case-mehr{margin-bottom:12px}
+
+/* 171 · Hürde senken direkt am Hero-Knopf */
+.hero-mikro{margin:10px 0 0; font-size:13.5px; color:rgba(255,255,255,.72); letter-spacing:.01em}
+.hero-mikro + .hero-trust{margin-top:14px}
+
+/* 172 · Kundengeschichten zugeklappt: nur die Ausgangslage (3 Zeilen) – kein Abbruch mitten im Text */
+.js .case-mehr{max-height:none}
+.js .case-mehr::after{display:none}
+.js .case:not(.offen) .story3 dt:not(:first-of-type),
+.js .case:not(.offen) .story3 dd:not(:first-of-type),
+.js .case:not(.offen) .case-mehr .vergleich{display:none}
+.js .case:not(.offen) .story3 dd:first-of-type{display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; overflow:hidden}
+
+/* 173 · „Warum mit mir?“ auf der linken Kante wie alle Abschnitte (statt zentriert) */
+@media(min-width:1024px){
+  .warum-kopf{grid-template-columns:minmax(0,1fr) 260px; justify-content:normal; gap:clamp(64px,8vw,120px)}
+  .warum-kopf > :first-child{max-width:560px}
+}
+/* 175 · Stimmen mit H2 wie alle Abschnitte */
+#stimmen h2{margin-bottom:26px}
+#stimmen .plaketten{margin-top:0}
+
+/* 177 · KI-Beirat: zwei vorhandene Stimmen als Beleg */
+.beirat-stimmen{padding-block:0; margin-top:clamp(36px,4vw,56px)}
+.beirat-tm{grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:18px}
+.beirat-tm .tm{display:flex; flex-direction:column}
+.beirat-tm .tm figcaption{margin-top:auto; padding-top:14px}
+.beirat-stimmen .bruecke{margin-top:22px}
+@media(max-width:860px){ .beirat-tm{grid-template-columns:1fr} }
+.beirat-stimmen .bruecke{text-align:left; max-width:none; margin-inline:0}
+.beirat-tm:has(.tm.offen){align-items:start}
+
+/* 178 · KI-Beirat: Porträt im Kopf – wer der Beirat ist */
+.beirat-kopf{display:grid; grid-template-columns:minmax(0,1fr) 300px; column-gap:clamp(40px,6vw,96px); align-items:start}
+.beirat-kopf > :not(.beirat-kopf-bild){grid-column:1}
+.beirat-kopf-bild{grid-column:2; grid-row:1 / span 5; align-self:center; margin:0; text-align:center}
+.beirat-kopf-bild img{display:block; width:100%; aspect-ratio:1; object-fit:cover; object-position:50% 10%; border-radius:50%;
+  background:radial-gradient(60% 60% at 50% 40%, #2c5a3a, var(--hero)); box-shadow:0 18px 40px rgba(17,50,44,.18)}
+.beirat-kopf-bild figcaption{margin-top:14px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+.beirat-kopf-bild figcaption b{color:var(--teal)}
+@media(max-width:860px){
+  .beirat-kopf{grid-template-columns:1fr}
+  .beirat-kopf-bild{grid-column:1; grid-row:auto; display:flex; align-items:center; gap:14px; text-align:left; margin:6px 0 18px}
+  .beirat-kopf-bild img{width:96px; flex:0 0 96px}
+  .beirat-kopf-bild figcaption{margin:0}
+}
+.beirat-kopf-bild img{height:auto}
+
+/* 179 · KI-Beirat: Schrittkarten drei plus zwei (breit genug für Titel und Text); Bildunterschrift ausgewogen */
+@media(min-width:901px){
+  .beirat-schritte{grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px}
+  .beirat-schritte .step{padding:24px}
+  .beirat-schritte .step h3{font-size:1.1rem}
+  .beirat-schritte .step p{font-size:1rem}
+}
+.beirat-kopf-bild figcaption{text-wrap:balance}
+
+/* 180: Wort nicht am Bindestrich umbrechen */
+.nw{white-space:nowrap}
