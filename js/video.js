@@ -26,6 +26,7 @@
       }
       box.innerHTML = "";
       box.appendChild(el);
+      box.classList.add("laeuft");
     });
   });
 })();

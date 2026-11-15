@@ -786,7 +786,7 @@ input[type=checkbox],input[type=radio]{width:18px; height:18px; padding:0; margi
 .bruecke b{white-space:nowrap}
 /* 133 · Handy: Porträt niedriger (Kopf und Schultern), damit „26 Std.“ früher im Bild ist; Datenzeile wieder sichtbar */
 @media(max-width:767px){
-  .hero-img img{height:190px; max-height:190px; width:100%; object-fit:cover; object-position:50% 4%}
+  .hero-img img{height:220px; max-height:220px; width:100%; object-fit:cover; object-position:50% 0}
   .hero-trust li:last-child{display:list-item}
 }
 /* 136 · Play-Knöpfe in Lime statt Orange – Orange bleibt dem Termin vorbehalten */
@@ -887,3 +887,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
    ein, Chrome wertete das als Scrollen und brach die LCP-Messung ab (PageSpeed „NO_LCP“).
    Die Knöpfe scrollen weiter weich – karussell.js setzt behavior:"smooth" selbst. */
 .karussell .cases,.karussell .testimonials{scroll-behavior:auto}
+
+/* 166 · Kundengeschichten gleich lang: Ergebnis oben, Geschichte auf feste Höhe, „Ganze Geschichte lesen“ klappt auf */
+.karussell .case{display:flex; flex-direction:column}
+.case-ergebnis{margin:14px 0 0 !important; font-size:17px; line-height:1.45; font-weight:800; color:var(--teal)}
+.case-ergebnis span{display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:2px}
+.js .case-mehr{max-height:9.6em; overflow:hidden; position:relative}
+.js .case-mehr::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3em; background:linear-gradient(rgba(255,255,255,0),#fff)}
+.js .case.offen .case-mehr{max-height:none}
+.js .case.offen .case-mehr::after{display:none}
+.js .case-mehr.passt::after{display:none}
+/* Hochkant-Video (Bautagebuch) im Ruhezustand so hoch wie die anderen; beim Abspielen hochkant */
+.case .video-hoch:not(.laeuft){aspect-ratio:16/9; max-width:none; margin:12px 0 4px}
+.karussell .cases:has(.case.offen),.karussell .cases:has(.video.laeuft){align-items:start}
+.karussell .case .case-knopf{margin-top:auto; position:relative; top:2px}
+.karussell .case .case-mehr{margin-bottom:12px}

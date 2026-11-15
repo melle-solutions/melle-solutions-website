@@ -88,3 +88,28 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(pruefen);
   window.addEventListener('resize', pruefen);
 })();
+
+// Kundengeschichten: „Ganze Geschichte lesen“ nur, wenn die Geschichte gekürzt ist; Klick klappt auf und zu.
+(function () {
+  var karten = document.querySelectorAll('.case');
+  function pruefen() {
+    karten.forEach(function (k) {
+      var t = k.querySelector('.case-mehr'), b = k.querySelector('.case-knopf');
+      if (!t || !b || k.classList.contains('offen')) return;
+      var passt = t.scrollHeight <= t.clientHeight + 2;
+      b.hidden = passt; t.classList.toggle('passt', passt);
+    });
+  }
+  karten.forEach(function (k) {
+    var b = k.querySelector('.case-knopf');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var auf = k.classList.toggle('offen');
+      b.setAttribute('aria-expanded', auf ? 'true' : 'false');
+      b.textContent = auf ? 'Weniger anzeigen' : 'Ganze Geschichte lesen';
+    });
+  });
+  pruefen();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(pruefen);
+  window.addEventListener('resize', pruefen);
+})();
