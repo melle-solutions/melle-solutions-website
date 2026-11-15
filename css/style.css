@@ -961,3 +961,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 
 /* 180: Wort nicht am Bindestrich umbrechen */
 .nw{white-space:nowrap}
+
+/* 181 · KI-Beirat: Stimmen auf grauem Band über die ganze Breite (wie Startseite) */
+.beirat-stimmen{background:var(--paper-2); box-shadow:0 0 0 100vmax var(--paper-2); clip-path:inset(0 -100vmax);
+  padding-block:clamp(48px,6vw,80px); margin-block:clamp(48px,6vw,80px)}
+.beirat-stimmen + h2{margin-top:0}
+.beirat-stimmen > h2{margin-top:0}
