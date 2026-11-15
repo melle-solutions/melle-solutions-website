@@ -882,3 +882,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 @media(max-width:860px){ .miete .miete-kopf{grid-template-columns:1fr; gap:32px} .miete-kopf-bild img{width:240px} }
 .bafa-einleitung{max-width:68ch; font-size:17px; line-height:1.6; margin:14px 0 22px}
 .miete-kopf-bild img{display:block; margin-inline:auto}
+
+/* 165 · Karussells ohne CSS-Smooth-Scroll: zusammen mit scroll-snap scrollte die Spur beim Laden weich
+   ein, Chrome wertete das als Scrollen und brach die LCP-Messung ab (PageSpeed „NO_LCP“).
+   Die Knöpfe scrollen weiter weich – karussell.js setzt behavior:"smooth" selbst. */
+.karussell .cases,.karussell .testimonials{scroll-behavior:auto}
