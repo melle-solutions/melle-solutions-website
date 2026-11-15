@@ -19,16 +19,16 @@ klasse: formular-seite bafa-seite
 <fieldset><legend>Antragsteller</legend>
   <label>Bei der antragstellenden Person handelt es sich um<select name="Art des Antragstellers" required><option value="">Bitte auswählen …</option><option>eine freiberuflich tätige Person</option><option>ein Unternehmen</option></select></label>
 
-  <label>Name der Organisation<input name="Name der Organisation" type="text" required></label>
+  <label>Name der Organisation<input name="Name der Organisation" type="text" autocomplete="organization" required></label>
 
-  <div class="zwei"><label>Anrede<select name="Anrede" required><option value="">Bitte auswählen …</option><option>Herr</option><option>Frau</option></select></label><label>Vorname<input name="Vorname" type="text" required></label></div>
-  <label>Nachname<input name="Nachname" type="text" required></label>
+  <div class="zwei"><label>Anrede<select name="Anrede" required><option value="">Bitte auswählen …</option><option>Herr</option><option>Frau</option></select></label><label>Vorname<input name="Vorname" type="text" autocomplete="given-name" required></label></div>
+  <label>Nachname<input name="Nachname" type="text" autocomplete="family-name" required></label>
 
   <label>Land<select name="Land" required><option value="">Bitte auswählen …</option><option>Deutschland</option><option>Anderes</option></select></label>
 
-  <div class="zwei"><label>Postleitzahl und Ort<input name="Postleitzahl und Ort" type="text" required></label><label>Straße und Hausnummer<input name="Straße und Hausnummer" type="text" required></label></div>
-  <div class="zwei"><label>Telefonnummer<input name="Telefonnummer" type="tel" required></label><label>E-Mail<input name="E-Mail" type="email" required></label></div>
-  <label>Webseite des Unternehmens<input name="Webseite des Unternehmens" type="url"></label>
+  <div class="zwei"><label>Postleitzahl und Ort<input name="Postleitzahl und Ort" type="text" required></label><label>Straße und Hausnummer<input name="Straße und Hausnummer" type="text" autocomplete="street-address" required></label></div>
+  <div class="zwei"><label>Telefonnummer<input name="Telefonnummer" type="tel" autocomplete="tel" required></label><label>E-Mail<input name="E-Mail" type="email" autocomplete="email" required></label></div>
+  <label>Webseite des Unternehmens<input name="Webseite des Unternehmens" type="url" autocomplete="url" placeholder="https://"></label>
 
 </fieldset>
 <fieldset><legend>Standort der Maßnahme (falls abweichend)</legend>
@@ -65,11 +65,11 @@ klasse: formular-seite bafa-seite
 <fieldset><legend>Unternehmenskennzahlen</legend>
   <label>Unternehmenstyp<select name="Unternehmenstyp" required><option value="">Bitte auswählen …</option><option>eigenständiges Unternehmen</option><option>Partnerunternehmen</option><option>verbundenes Unternehmen</option></select></label>
 
-  <div class="drei"><label>Anzahl der Beschäftigten<input name="Anzahl der Beschäftigten" type="number" required></label><label>Jahresbilanzsumme in Euro<input name="Jahresbilanzsumme in Euro" type="text" required></label><label>Jahresumsatz in Euro<input name="Jahresumsatz in Euro" type="text" required></label></div>
+  <div class="drei"><label>Anzahl der Beschäftigten<input name="Anzahl der Beschäftigten" type="number" inputmode="numeric" min="1" required></label><label>Jahresbilanzsumme in Euro<input name="Jahresbilanzsumme in Euro" type="text" inputmode="decimal" required></label><label>Jahresumsatz in Euro<input name="Jahresumsatz in Euro" type="text" inputmode="decimal" required></label></div>
 </fieldset>
 <fieldset><legend>Bankverbindung und Steuer</legend>
-  <div class="zwei"><label>Kontoinhaber<input name="Kontoinhaber" type="text" required></label><label>IBAN<input name="IBAN" type="text" required></label></div>
-  <label>Umsatzsteuer-ID<input name="Umsatzsteuer-ID" type="text" required></label>
+  <div class="zwei"><label>Kontoinhaber<input name="Kontoinhaber" type="text" autocomplete="off" required></label><label>IBAN<input name="IBAN" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" required></label></div>
+  <label>Umsatzsteuer-ID<input name="Umsatzsteuer-ID" type="text" autocapitalize="characters" spellcheck="false" required></label>
 
 </fieldset>
 <fieldset><legend>Ergänzungen</legend>

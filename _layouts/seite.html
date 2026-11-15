@@ -4,6 +4,7 @@
 {% include kopfdaten.html %}
   <title>{{ page.title }} – Melle Solutions</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+{% unless page.noindex %}{% include teilen.html %}{% endunless %}
   {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
 </head>
 <body>
@@ -14,6 +15,6 @@
   </div>
 </section>
 {% include fuss.html %}
-<script src="/js/formulare.js?v=141"></script>
+<script src="/js/formulare.js?v=161"></script>
 </body>
 </html>

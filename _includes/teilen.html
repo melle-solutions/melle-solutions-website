@@ -1,0 +1,11 @@
+{%- assign t_desc = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
+{%- assign t_bild = page.image | default: "/assets/teilen-melle.jpg" -%}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{{ include.typ | default: 'website' }}">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Melle Solutions">
+  <meta property="og:title" content="{{ page.title }} – Melle Solutions">
+  <meta property="og:description" content="{{ t_desc }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ t_bild }}">
+  <meta name="twitter:card" content="summary_large_image">

@@ -4,10 +4,7 @@
 {% include kopfdaten.html %}
   <title>{{ page.title }} – Melle Solutions</title>
   <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image }}">{% endif %}
+{% include teilen.html typ="article" %}
 </head>
 <body>
 {% include kopf.html %}
@@ -19,6 +16,11 @@
     <div class="beitrag-text">
 {{ content }}
     </div>
+    {% unless page.ohne_autor %}<aside class="autor-box">
+      <img src="/assets/mario-melle-640.webp" alt="" width="72" height="72" loading="lazy">
+      <div><p class="autor-name">Mario Melle</p>
+      <p>KI-Berater aus Jena · seit 1996 in der Softwareentwicklung · 13 Firmen gegründet, 7 verkauft. <a href="/#warum">Mehr über mich</a></p></div>
+    </aside>{% endunless %}
     <div class="beitrag-cta">
       <p><b>Wie wäre das bei Ihnen?</b> In 15 Minuten klären wir, wo KI Ihnen Zeit und Geld spart.</p>
       <a class="btn-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk">✓</span> 15-Min-Gespräch buchen</a>

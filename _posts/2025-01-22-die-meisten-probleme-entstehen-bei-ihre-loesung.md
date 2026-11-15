@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Die meisten Probleme entstehen bei ihre Lösung"
+title: "Die meisten Probleme entstehen bei ihrer Lösung"
 date: 2025-01-22 19:41:30
 permalink: "/🌳🪓-die-meisten-probleme-entstehen-bei-ihre-loesung/"
 image: "/assets/blog/die-meisten-probleme-entstehen-bei-ihre-loesung/Beitragsbild-Die-meisten-Probleme-entstehen-bei-ihrer-Loesung-1024x576-7.jpg"
@@ -29,4 +29,4 @@ Die Lösung liegt im Vorbereitet seit, mit dem Unerwarteten umzugehen. Es hilft 
 
 Ich sehe gerade eine Katze vor meinem geistigen Auge. Sie scheinen keine Angst zu kennen. Sie vertrauen auf Ihre Fertigkeiten, dass sie sich in einem gefährlichen Augenblick blitzschnell bewegen können.
 
-Zurück zu Donald… „**Die meisten Probleme entstehen bei ihre Lösung**„, Leonardo da Vinci
+Zurück zu Donald… „**Die meisten Probleme entstehen bei ihrer Lösung**“, Leonardo da Vinci
