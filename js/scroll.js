@@ -64,3 +64,27 @@
   }, { threshold: 0.6 });
   z.forEach(function (el) { io.observe(el); });
 })();
+
+// Stimmen: „Ganzes Zitat lesen“ nur zeigen, wenn der Text wirklich gekürzt ist; Klick klappt auf und zu.
+(function () {
+  var karten = document.querySelectorAll('.tm');
+  function pruefen() {
+    karten.forEach(function (k) {
+      var t = k.querySelector('.tm-voll'), b = k.querySelector('.tm-mehr');
+      if (!t || !b || k.classList.contains('offen')) return;
+      b.hidden = t.scrollHeight <= t.clientHeight + 2;
+    });
+  }
+  karten.forEach(function (k) {
+    var b = k.querySelector('.tm-mehr');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var auf = k.classList.toggle('offen');
+      b.setAttribute('aria-expanded', auf ? 'true' : 'false');
+      b.textContent = auf ? 'Weniger anzeigen' : 'Ganzes Zitat lesen';
+    });
+  });
+  pruefen();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(pruefen);
+  window.addEventListener('resize', pruefen);
+})();

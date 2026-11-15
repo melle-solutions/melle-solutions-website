@@ -396,7 +396,7 @@ section.hero{padding-block:0}
 .schritte-oben{padding-top:clamp(56px,6vw,80px)}
 .schritte-oben .step{background:var(--paper-2)}
 /* Kernsatz in Kundenstimmen hervorheben */
-.tm blockquote strong{color:var(--teal); font-weight:800; background:linear-gradient(transparent 62%, rgba(150,255,56,.35) 0)}
+.tm .tm-kern strong{color:var(--teal); font-weight:800; background:linear-gradient(transparent 62%, rgba(150,255,56,.35) 0)}
 /* „Warum mit mir?“ mit Vorstellungsvideo daneben; Bereit-Block einspaltig */
 .warum-kopf{display:grid; grid-template-columns:1fr 260px; gap:36px; align-items:center}
 .warum-lede{margin:14px 0 0; text-align:left; max-width:44ch}
@@ -764,9 +764,9 @@ input[type=checkbox],input[type=radio]{width:18px; height:18px; padding:0; margi
 /* 127b · Brücke gehört zum Karussell: weniger Luft darunter */
 #projekte{padding-bottom:max(28px, calc(clamp(58px,7.2vw,104px) - 30px))}
 /* 128 · Stimmen: Lime-Markierung wird einmal von links nach rechts eingezeichnet */
-.js .tm blockquote strong{background-repeat:no-repeat; background-size:0% 100%; transition:background-size 600ms cubic-bezier(.22,1,.36,1) 250ms}
-.js .tm.marker-los blockquote strong{background-size:100% 100%}
-@media (prefers-reduced-motion: reduce){ .js .tm blockquote strong{background-size:100% 100%; transition:none} }
+.js .tm .tm-kern strong{background-repeat:no-repeat; background-size:0% 100%; transition:background-size 600ms cubic-bezier(.22,1,.36,1) 250ms}
+.js .tm.marker-los .tm-kern strong{background-size:100% 100%}
+@media (prefers-reduced-motion: reduce){ .js .tm .tm-kern strong{background-size:100% 100%; transition:none} }
 /* 129 · Häufige Fragen: Antwort klappt weich auf (moderne Browser; sonst wie bisher sofort) */
 .faq details{interpolate-size:allow-keywords}
 .faq details::details-content{block-size:0; overflow:hidden; opacity:0;
@@ -850,3 +850,35 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   .beirat-saeulen img{height:110px}
 }
 @media(max-width:640px){ .formular legend{font-size:15px; line-height:1.35; max-width:100%} }
+
+/* 162–164 · Abschnitte wechseln weiß/grau, nur Kontakt (und Hero) dunkel; überall gleiche Abstände */
+.schritte-oben,.sicher{background:#fff}
+#projekte,#fragen{background:var(--paper-2)}
+.schritte-oben,#projekte,section.anschluss{padding-block:clamp(58px,7.2vw,104px)}
+@media(max-width:560px){ .schritte-oben,#projekte,section.anschluss{padding-block:clamp(48px,12vw,64px)} }
+.schritte-oben .step{border:1px solid var(--line)}
+/* Abschluss: eine Schriftfamilie, drei Stufen – Überschrift, Zitat, Text */
+.abschluss .kicker{justify-content:center}
+.abschluss .haltung{margin:22px auto 0; font-size:clamp(19px,2vw,23px)}
+.abschluss .haltung cite{margin-top:8px; font-size:15px; font-weight:600; color:var(--muted)}
+.abschluss .haltung cite::before{content:"– "}
+.abschluss-text{max-width:58ch; margin:22px auto 28px; font-size:clamp(17px,1.5vw,19px); line-height:1.6}
+
+/* 163 · Stimmen gleich lang: Kernsatz oben, voller Text auf vier Zeilen, „Ganzes Zitat lesen“ klappt auf */
+.tm .tm-kern{margin:16px 0 0; font-size:17px; line-height:1.45}
+.tm .tm-voll{margin:10px 0 0; color:var(--muted)}
+.js .tm .tm-voll{display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:4; line-clamp:4; overflow:hidden}
+.js .tm.offen .tm-voll{display:block; -webkit-line-clamp:unset; line-clamp:none}
+.tm-mehr{align-self:flex-start; margin-top:8px; padding:0; border:0; background:none; font:inherit; font-size:14px; font-weight:800; color:var(--teal); text-decoration:underline; text-decoration-color:var(--lime); text-decoration-thickness:3px; text-underline-offset:4px; cursor:pointer}
+.tm-mehr:hover{text-decoration-color:var(--teal)}
+.karussell .testimonials{align-items:stretch}
+.karussell .testimonials:has(.tm.offen){align-items:start}
+
+/* 164 · Miete: Handy-Bild aus Diktaform rechts im Kopf; BAFA-Einleitung */
+.miete .miete-kopf{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:56px; align-items:center}
+.miete-kopf-bild{margin:0; text-align:center}
+.miete-kopf-bild img{width:282px; max-width:100%; height:auto; border-radius:28px; border:8px solid var(--teal); box-shadow:0 24px 50px rgba(17,50,44,.22)}
+.miete-kopf-bild figcaption{margin-top:12px; font-size:13px; color:var(--muted)}
+@media(max-width:860px){ .miete .miete-kopf{grid-template-columns:1fr; gap:32px} .miete-kopf-bild img{width:240px} }
+.bafa-einleitung{max-width:68ch; font-size:17px; line-height:1.6; margin:14px 0 22px}
+.miete-kopf-bild img{display:block; margin-inline:auto}
