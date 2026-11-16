@@ -967,3 +967,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   padding-block:clamp(48px,6vw,80px); margin-block:clamp(48px,6vw,80px)}
 .beirat-stimmen + h2{margin-top:0}
 .beirat-stimmen > h2{margin-top:0}
+
+/* 182 · Startseite „Warum“: „Wie ich denke“ als Leiste über die ganze Breite der Karten */
+#warum .denkweise-leiste{display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:baseline;
+  max-width:none; margin:22px 0 0; padding:28px 36px; background:#fff; border:1px solid var(--line);
+  border-left:4px solid var(--lime); border-radius:16px}
+#warum .denkweise-leiste b{font-size:13px; letter-spacing:.08em; text-transform:uppercase; font-weight:800; color:var(--teal)}
+@media(max-width:700px){
+  #warum .denkweise-leiste{grid-template-columns:1fr; gap:8px; padding:22px 22px 24px}
+}
