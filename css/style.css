@@ -979,7 +979,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 
 /* Kunden-Wolke (Schritt 186): Liste ohne Skript bzw. bei „weniger Bewegung“, sonst wechselndes Raster */
 .kunden-wolke{padding-bottom:0}
-#kunden h2{margin-bottom:24px}
+#kunden h2{margin-bottom:28px}
+/* Kunden und Stimmen als ein Beleg-Block: geringerer Abstand dazwischen */
+.kunden-wolke + .anschluss{padding-top:clamp(48px,5vw,72px)}
 /* Scrollcraft am Kundenraster: Licht folgt der Maus in Lime, Kacheln liegen darüber */
 .kunden-raster[data-sc-spotlight]{--sc-accent:var(--lime); border-radius:14px}
 .kunden-raster[data-sc-spotlight]::after{z-index:0; border-radius:inherit; inset:-10px}
@@ -991,8 +993,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .kunden-an .kunden-raster{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px}
 .kunden-an .kunden-liste{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 .kunden-feld{min-height:74px; border-radius:10px; background:var(--paper-2); display:flex; align-items:center; justify-content:center;
-  text-align:center; padding:8px 12px; color:var(--teal); font-weight:700; font-size:16px; line-height:1.25; transition:opacity .5s ease}
-.kunden-feld.a{background:#e9fbd8; font-weight:800; font-size:17px; box-shadow:inset 0 -3px 0 var(--lime)}
+  text-align:center; padding:8px 12px; color:var(--ink); font-weight:600; font-size:16px; line-height:1.25; transition:opacity .5s ease;
+  hyphens:manual; overflow-wrap:break-word; text-wrap:balance}
+.kunden-feld.a{background:#fff; border:1px solid var(--line); color:var(--teal); font-weight:800; font-size:17px;
+  box-shadow:0 1px 3px rgba(26,56,56,.07), inset 0 -3px 0 var(--lime)}
 .kunden-raster > .kunden-feld.weg{opacity:0}
 .js .kunden-raster > .kunden-feld{transition:opacity .5s ease, transform .62s cubic-bezier(.2,.7,.2,1)}
-@media (max-width:760px){ .kunden-an .kunden-raster{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px} .kunden-feld{min-height:62px; font-size:15px} }
+@media (max-width:760px){ .kunden-an .kunden-raster{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px} .kunden-feld{min-height:66px; font-size:14px; hyphens:auto} .kunden-feld.a{font-size:15px} }

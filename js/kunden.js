@@ -1,5 +1,6 @@
 // Kunden-Wolke (#kunden): wechselndes Raster aus der Namensliste. Ohne Skript oder bei
 // „weniger Bewegung“ bleibt die ruhige Liste stehen. Pausiert außer Sicht und solange die Maus darauf steht.
+// A-Kunden sitzen auf festen Plätzen im Schachbrett; jeder Platz tauscht nur innerhalb seiner Gruppe.
 (function () {
   var sek = document.getElementById('kunden');
   if (!sek) return;
@@ -8,30 +9,41 @@
   var namen = Array.prototype.map.call(sek.querySelectorAll('.kunden-liste li'), function (li) {
     return { n: li.textContent, a: li.classList.contains('a') };
   });
-  var felderZahl = window.matchMedia('(max-width:760px)').matches ? 8 : 12;
+  var handy = window.matchMedia('(max-width:760px)').matches;
+  var felderZahl = handy ? 8 : 12;
+  var aPlaetze = handy ? [0, 3, 4, 7] : [0, 2, 5, 7, 8, 10];
   if (namen.length <= felderZahl) return;
-  // Startbild: A- und übrige Namen abwechselnd, übrige gemischt
-  var a = namen.filter(function (x) { return x.a; }), b = namen.filter(function (x) { return !x.a; });
-  for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = b[i]; b[i] = b[j]; b[j] = t; }
-  var reihe = [];
-  while (a.length || b.length) { if (a.length) reihe.push(a.shift()); if (b.length) reihe.push(b.shift()); }
-  var sicht = reihe.splice(0, felderZahl), warte = reihe;
-  sicht.forEach(function (x) {
-    var d = document.createElement('div'); d.className = 'kunden-feld' + (x.a ? ' a' : ''); d.textContent = x.n; raster.appendChild(d);
-  });
+
+  function mischen(l) {
+    for (var i = l.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = l[i]; l[i] = l[j]; l[j] = t; }
+    return l;
+  }
+  var warteA = mischen(namen.filter(function (x) { return x.a; }));
+  var warteB = mischen(namen.filter(function (x) { return !x.a; }));
+  var istA = [], sicht = [];
+  for (var k = 0; k < felderZahl; k++) {
+    istA[k] = aPlaetze.indexOf(k) >= 0 && warteA.length > 0;
+    sicht[k] = istA[k] ? warteA.shift() : warteB.shift();
+    var d = document.createElement('div');
+    d.className = 'kunden-feld' + (istA[k] ? ' a' : '');
+    d.textContent = sicht[k].n;
+    raster.appendChild(d);
+  }
   sek.classList.add('kunden-an');
+
   var sichtbar = false, maus = false, zuletzt = -1;
   function tausche() {
     if (!sichtbar || maus || document.hidden) return;
     var k; do { k = Math.floor(Math.random() * felderZahl); } while (k === zuletzt);
+    var warte = istA[k] ? warteA : warteB;
+    if (!warte.length) return;
     zuletzt = k;
     var feld = raster.children[k];
     feld.classList.add('weg');
     setTimeout(function () {
       warte.push(sicht[k]); sicht[k] = warte.shift();
       feld.textContent = sicht[k].n; feld.style.transitionDelay = '';
-      // sc-in behalten: Scrollcraft blendet die Kacheln über diese Klasse ein
-      feld.className = 'kunden-feld sc-in' + (sicht[k].a ? ' a' : '');
+      feld.classList.remove('weg'); // sc-in und a bleiben: Scrollcraft blendet über sc-in ein
     }, 500);
   }
   setInterval(tausche, 2000);
