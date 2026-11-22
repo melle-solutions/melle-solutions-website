@@ -1090,4 +1090,6 @@ section.abschluss{padding-block:clamp(96px,11vw,160px)}
 .kunden-an .kunden-raster{grid-auto-rows:68px}
 @media (max-width:760px){ .kunden-an .kunden-raster{grid-auto-rows:72px} }
 @media (prefers-reduced-motion: reduce){ .kunden-feld > span{transition:none} }
+/* 201 · Kundenkacheln: leichter, einheitlicher Farbton statt Weiß (Mario) */
+.kunden-feld, .kunden-feld.a{background:linear-gradient(180deg,#f7fbf3 0%,#eef6e8 100%); border-color:#e1ecdc}
 
