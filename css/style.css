@@ -1052,3 +1052,28 @@ section.abschluss{padding-block:clamp(96px,11vw,160px)}
 .abschluss .haltung{font-size:clamp(20px,2.2vw,26px); margin-top:30px}
 @media (prefers-reduced-motion: reduce){ .abschluss .haltung[data-sc-in]{opacity:1; transform:none} }
 
+/* 197 · Rhythmus 4: weniger Kästen – Rollen offen, Sicherheit mittig und am Handy als Liste */
+#warum .story .card{background:none; border:0; box-shadow:none; border-radius:0; padding:0}
+@media(min-width:861px){ #warum .story{column-gap:48px} }
+@media(max-width:860px){
+  #warum .story{row-gap:0}
+  #warum .story .card{border-top:1px solid var(--line); padding:24px 0}
+  #warum .story .card:first-child{border-top:0; padding-top:4px}
+}
+@media(min-width:1000px){
+  .sicher-wrap{grid-template-columns:4fr 8fr; align-items:center}
+  .sicher-kopf{position:static}
+  .sicher-kopf h2{font-size:clamp(32px,3.3vw,44px)}
+}
+@media(max-width:760px){
+  .sicher-grid{gap:0}
+  .sicher-punkt, .sicher-punkt:hover{background:none; border:0; border-top:1px solid rgba(255,255,255,.12); border-radius:0; padding:20px 0; transform:none; box-shadow:none;
+    display:grid; grid-template-columns:40px 1fr; column-gap:14px; align-items:center}
+  .sicher-punkt:first-child{border-top:0}
+  .sicher-icon{width:40px; height:40px; border-radius:11px}
+  .sicher-icon svg{width:21px; height:21px}
+  .sicher-punkt h3{margin:0}
+  .sicher-punkt p{grid-column:2; margin-top:8px}
+}
+#warum .denkweise-leiste{margin-top:40px}
+.sicher-kopf h2{text-wrap:wrap}
