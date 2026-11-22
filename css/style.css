@@ -1188,3 +1188,5 @@ html{scroll-padding-top:92px}
 /* 211 · Coach-Haltung als Schlusssatz der Coach-Karte */
 .coach-haltung{margin:18px 0 0; padding:2px 0 2px 16px; border-left:3px solid var(--lime); color:var(--teal); font-weight:700; font-size:16.5px; line-height:1.5}
 .beirat-haltung{max-width:62ch; margin:6px 0 26px; font-size:17.5px}
+/* 214: hervorgehobene Zahl im Finder bricht nie um – sonst zerreißt die Markierung über zwei Zeilen */
+.finder-nachher .finder-zahl{display:inline-block; white-space:nowrap; line-height:1.15; font-size:clamp(20px,1.9vw,24px); margin:2px 0}
