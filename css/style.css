@@ -1093,3 +1093,96 @@ section.abschluss{padding-block:clamp(96px,11vw,160px)}
 /* 201 · Kundenkacheln: leichter, einheitlicher Farbton statt Weiß (Mario) */
 .kunden-feld, .kunden-feld.a{background:linear-gradient(180deg,#f7fbf3 0%,#eef6e8 100%); border-color:#e1ecdc}
 
+/* Nur für Screenreader sichtbar */
+.sr-only{position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+/* Grautext knapp über 4,5:1 (vorher 4,46:1) */
+:root{--muted:#647571}
+
+/* 210/211 · Zeitfresser-Finder unter dem Hero: eine Frage → Vorher/Nachher aus einer echten Kundengeschichte → passender Termin */
+.features-wrap{background:linear-gradient(transparent 56px, #f3fbe9 56px)}
+@media(max-width:860px){ .features-wrap{background:linear-gradient(transparent 40px, #f3fbe9 40px)} }
+.finder{background:linear-gradient(180deg,#f3fbe9 0%,#eef7e5 100%); padding-block:clamp(48px,5.5vw,76px) clamp(56px,6.5vw,88px)}
+.finder-kopf{text-align:center; margin-bottom:24px}
+.finder-kopf .kicker{justify-content:center}
+.finder-kopf h2{font-size:clamp(28px,3.6vw,46px); margin-top:6px}
+.finder-wahl{border:0; padding:0; margin:0 auto; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; max-width:1040px; min-width:0}
+.finder-radio{position:absolute; opacity:0; width:1px; height:1px; pointer-events:none}
+.finder-wahl label{display:flex; flex-direction:column; gap:4px; background:#fff; border:1.5px solid #dbe8d3; border-radius:14px;
+  padding:16px 18px 16px 50px; cursor:pointer; position:relative; transition:border-color .2s, box-shadow .2s, transform .2s, background .2s; min-height:84px; justify-content:center}
+.finder-wahl label::before{content:""; position:absolute; left:18px; top:50%; width:18px; height:18px; margin-top:-9px; border-radius:50%;
+  border:2px solid #6f8a80; background:#fff; transition:all .2s}
+.finder-wahl label b{color:var(--teal); font-size:16.5px; line-height:1.25}
+.finder-wahl label small{color:var(--muted); font-size:13.5px; line-height:1.35}
+.finder-wahl label:hover{border-color:var(--teal); transform:translateY(-2px); box-shadow:0 10px 24px rgba(17,50,44,.08)}
+.finder-radio:focus-visible + label{outline:3px solid var(--teal); outline-offset:3px}
+.finder-radio:checked + label{border-color:var(--teal); background:var(--teal); box-shadow:none; transform:none}
+.finder-radio:checked + label b{color:#fff}
+.finder-radio:checked + label small{color:#cfe0da}
+.finder-radio:checked + label::before{border-color:var(--lime); background:var(--lime); box-shadow:inset 0 0 0 4px var(--teal)}
+/* Ergebnis: vor der Wahl ein ruhiger gestrichelter Hinweis (keine Orange-Aufforderung), Höhe reserviert */
+.finder-ergebnisse{max-width:1040px; margin:14px auto 0; border-radius:18px; border:1.5px dashed #c9dfbb; background:transparent;
+  min-height:196px; display:flex; align-items:center; justify-content:center; padding:24px 28px; transition:background .25s, border-color .25s}
+.finder-leer{margin:0; color:var(--muted); font-size:16px; text-align:center; max-width:52ch}
+.finder-erg{display:none; width:100%; grid-template-columns:1fr 1.25fr auto; gap:18px 30px; align-items:center}
+.finder:has(.finder-radio:checked) .finder-ergebnisse{background:#fff; border:1.5px solid var(--teal); box-shadow:0 16px 40px rgba(17,50,44,.08)}
+.finder:has(.finder-radio:checked) .finder-leer{display:none}
+.finder:has(#zf-1:checked) .e1, .finder:has(#zf-2:checked) .e2, .finder:has(#zf-3:checked) .e3,
+.finder:has(#zf-4:checked) .e4, .finder:has(#zf-5:checked) .e5, .finder:has(#zf-6:checked) .e6{display:grid; animation:finder-rein .35s ease-out}
+.finder-etikett{display:inline-block; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+.finder-nachher .finder-etikett{color:var(--teal)}
+.finder-demo{margin-left:6px; background:var(--paper-2); border-radius:6px; padding:1px 6px; letter-spacing:.02em; text-transform:none; font-weight:700; color:var(--muted)}
+.finder-vorher p{margin:0; color:var(--ink); font-size:15.5px; line-height:1.55}
+.finder-vorher{padding-right:24px; border-right:1px solid var(--line)}
+.finder-quelle{margin-top:6px !important; font-size:13px !important; color:var(--muted) !important}
+.finder-nachher p{margin:0; font-size:16.5px; line-height:1.5; color:var(--ink)}
+.finder-zahl{color:var(--teal); font-weight:900; font-size:clamp(22px,2.2vw,28px); background:linear-gradient(transparent 62%, rgba(150,255,56,.6) 0); padding:0 3px}
+.finder-links{margin:10px 0 0 !important; font-weight:800}
+.finder-links a{color:var(--teal); text-decoration:none; border-bottom:2px solid var(--lime)}
+.finder-links a:hover{background:rgba(150,255,56,.25)}
+.finder-aktion{text-align:center}
+.finder-cta{white-space:nowrap}
+.finder-mikro{margin:8px 0 0; font-size:12.5px; color:var(--muted)}
+/* Sprungziele nicht unter der festen Kopfzeile */
+.case, #stimmen, #schritte{scroll-margin-top:96px}
+.case:focus{outline:3px solid var(--teal); outline-offset:3px}
+.case:focus:not(:focus-visible){outline:none}
+@keyframes finder-rein{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion: reduce){ .finder-erg{animation:none !important} .finder-wahl label, .finder-wahl label:hover{transition:none; transform:none} }
+@media (max-width:980px){ .finder-erg{grid-template-columns:1fr 1.2fr} .finder-aktion{grid-column:1 / -1} }
+@media (max-width:760px){
+  .finder-kopf .kicker{flex-direction:column; gap:8px; text-align:center}
+  .finder-wahl{grid-template-columns:1fr 1fr; gap:8px}
+  .finder-wahl small{display:none}
+  .finder-wahl label{min-height:64px; padding:12px 10px 12px 38px}
+  .finder-wahl label::before{left:12px; width:16px; height:16px; margin-top:-8px}
+  .finder-wahl label b{font-size:14.5px}
+  .finder-ergebnisse{padding:18px; min-height:150px}
+  .finder-erg{grid-template-columns:1fr; gap:14px}
+  .finder-vorher{padding-right:0; border-right:0; padding-bottom:14px; border-bottom:1px solid var(--line)}
+  .finder-cta{white-space:nowrap; justify-content:center; font-size:15px; padding-inline:14px; width:100%}
+}
+/* Ablauf-Kopf wieder linksbündig: keine zwei zentrierten hellen Köpfe hintereinander */
+.schritte-oben .wrap > .kicker, .schritte-oben .wrap > h2{text-align:left; justify-content:flex-start; margin-inline:0}
+
+@media (max-width:760px){ .finder-kopf .kicker::before{flex:0 0 4px; width:26px} }
+html{scroll-padding-top:92px}
+@media (max-width:760px){ html{scroll-padding-top:84px} }
+/* 212 · Finder-Feinschliff nach Experten-Runde 2 */
+.finder-erg{align-items:start}
+.finder-aktion{align-self:center}
+.finder-ergebnisse{border-color:transparent; scroll-margin-top:84px}
+.finder:not(:has(.finder-radio:checked)) .finder-ergebnisse{min-height:120px}
+.finder-demo{background:#fff; color:var(--teal)}
+#stimmen:focus, #schritte:focus{outline:none}
+#stimmen:focus-visible, #schritte:focus-visible{outline:3px solid var(--teal); outline-offset:-3px}
+@media (max-width:760px){
+  .finder-vorher p{font-size:15px; line-height:1.5}
+  .finder-vorher{padding-bottom:12px}
+  .finder-erg{gap:12px}
+  .finder-ergebnisse{min-height:0}
+}
+
+.finder-nachher .finder-zahl{line-height:1.2; vertical-align:baseline}
+.finder-ihre-wahl{display:none}
+@media (max-width:760px){ .finder-ihre-wahl{display:block; grid-column:1 / -1; margin:0 0 2px; font-size:13px; color:var(--muted)} .finder-ihre-wahl b{color:var(--teal)} }
+

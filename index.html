@@ -20,13 +20,14 @@
   <meta name="theme-color" content="#11322c">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=201">
+  <link rel="stylesheet" href="css/style.css?v=212">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="assets/vendor/scrollcraft/scrollcraft-auszug.css?v=182">
   <script defer src="assets/vendor/scrollcraft/scrollcraft.js?v=182"></script>
   <script defer src="js/scroll.js?v=182"></script>
   <script defer src="js/stimmen.js?v=182"></script>
   <script defer src="js/kunden.js?v=200"></script>
+  <script defer src="js/finder.js?v=212"></script>
   <!-- Einwilligung: eigenes Banner (js/einwilligung.js); Hotjar und Leadinfo starten erst nach Zustimmung -->
   <script type="text/plain" data-einwilligung="hotjar" src="/js/hotjar.js"></script>
   <script type="text/plain" data-einwilligung="leadinfo" src="/js/leadinfo.js"></script>
@@ -105,10 +106,81 @@
 </div>
 
 <!-- 3 SCHRITTE -->
-<section id="schritte" class="schritte-oben">
+<!-- 210 · ZEITFRESSER-FINDER: eine Frage → Vorher/Nachher aus einer echten Kundengeschichte → passender Termin-Knopf (funktioniert ohne JavaScript) -->
+<section class="finder" id="finder" aria-labelledby="finder-h">
+  <div class="wrap">
+    <div class="finder-kopf">
+      <span class="kicker">In 10 Sekunden zum passenden Beispiel</span>
+      <h2 id="finder-h">Wo verliert Ihr Team gerade Zeit?</h2>
+    </div>
+    <fieldset class="finder-wahl">
+      <legend class="sr-only">Wo verliert Ihr Team gerade Zeit? Eine Antwort wählen</legend>
+      <input type="radio" name="zeitfresser" id="zf-1" class="finder-radio"><label for="zf-1"><b>E-Mails und Bestellungen abtippen</b><small>Daten von Hand ins System übertragen</small></label>
+      <input type="radio" name="zeitfresser" id="zf-2" class="finder-radio"><label for="zf-2"><b>Texte und Produktdaten schreiben</b><small>Beschreibungen, Shop, Marketing</small></label>
+      <input type="radio" name="zeitfresser" id="zf-3" class="finder-radio"><label for="zf-3"><b>Protokolle vor Ort ausfüllen</b><small>Formulare, Nachweise, Fotos</small></label>
+      <input type="radio" name="zeitfresser" id="zf-4" class="finder-radio"><label for="zf-4"><b>Wissen steckt in Köpfen und Excel</b><small>Einkauf, Planung, Erfahrung</small></label>
+      <input type="radio" name="zeitfresser" id="zf-5" class="finder-radio"><label for="zf-5"><b>Inhalte in andere Sprachen bringen</b><small>Videos, Schulungen, Vertrieb</small></label>
+      <input type="radio" name="zeitfresser" id="zf-6" class="finder-radio"><label for="zf-6"><b>Weiß ich noch nicht genau</b><small>Es hakt, aber wo zuerst?</small></label>
+    </fieldset>
+    <div class="finder-ergebnisse">
+        <p class="finder-leer">Wählen Sie oben, was am meisten Zeit kostet – Sie sehen sofort das Vorher und Nachher bei einem Kunden.</p>
+        <div class="finder-erg e1" data-ansage="26 Stunden pro Woche gespart – eine KI liest die Mails und trägt die Daten ins Warenwirtschaftssystem ein.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>E-Mails und Bestellungen abtippen</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>Täglich kamen zahlreiche Lieferabrufe per E-Mail. Mitarbeiter tippten die Daten von Hand ab – zeitaufwendig und fehleranfällig.</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher</span><p><strong class="finder-zahl">26 Stunden</strong> pro Woche gespart: Eine KI liest die Mails und trägt die Daten ins Warenwirtschaftssystem ein.</p>
+            <p class="finder-links"><a href="#fall-1">So haben wir das gelöst<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Über Ihre Bestellungen sprechen<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+        <div class="finder-erg e2" data-ansage="Zwei Stunden statt sechs Wochen – die KI liest die Seiten, findet Suchbegriffe und schreibt die Texte, im Shop, den meine Firma constancy betreibt.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>Texte und Produktdaten schreiben</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>Rund 1.000 Seiten eines Onlineshops brauchten Beschreibungen für Google. Von Hand wären das etwa sechs Wochen Arbeit gewesen.</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher</span><p><strong class="finder-zahl">Zwei Stunden</strong> statt sechs Wochen: Die KI liest die Seiten, findet Suchbegriffe und schreibt die Texte – im Shop, den meine Firma constancy betreibt.</p>
+            <p class="finder-links"><a href="#fall-2">So haben wir das gelöst<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Über Ihre Texte sprechen<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+        <div class="finder-erg e3" data-ansage="Ein Diktat – alle Pflichtfelder gefüllt: die KI füllt das Formular, prüft es und erzeugt das Protokoll mit Fotos als PDF.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>Protokolle vor Ort ausfüllen</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>Nach dem Einsatz beim Kunden muss der Handwerker ein Protokoll ausfüllen – auf Papier oder am iPad. Beides wird wenig angenommen.</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher <span class="finder-demo">Demo</span></span><p><strong class="finder-zahl">Ein Diktat</strong> – alle Pflichtfelder gefüllt: Die KI füllt das Formular, prüft es und erzeugt das Protokoll mit Fotos als PDF.</p>
+            <p class="finder-links"><a href="#fall-3">Zur Demo<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Über Ihre Protokolle sprechen<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+        <div class="finder-erg e4" data-ansage="Ein klarer Fahrplan – was die KI bei uns übernehmen kann und was nicht, sagt der Geschäftsführer. Uns geht es nicht ums Ersetzen, sondern ums Entlasten.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>Wissen steckt in Köpfen und Excel</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>„Unser Einkauf hängt an zwei erfahrenen Kolleginnen und an viel Wissen, das bisher nur in Excel-Listen und in ihren Köpfen stand.“</p><p class="finder-quelle">Geschäftsführer eines Lebensmittelherstellers</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher</span><p><strong class="finder-zahl">Ein klarer Fahrplan:</strong> „was die KI bei uns übernehmen kann und was nicht.“ Und: „Uns geht es nicht ums Ersetzen, sondern ums Entlasten.“</p>
+            <p class="finder-links"><a href="#stimmen">Die ganze Stimme lesen<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Über Ihr Wissen sprechen<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+        <div class="finder-erg e5" data-ansage="Sekunden statt Wochen – die KI übersetzt das Video automatisch in weitere Sprachen.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>Inhalte in andere Sprachen bringen</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>Eine Workshop-Ansprache lag nur auf Deutsch vor. Für ein internationales Publikum reichte das nicht.</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher</span><p><strong class="finder-zahl">Sekunden</strong> statt Wochen: Die KI übersetzt das Video automatisch in weitere Sprachen.</p>
+            <p class="finder-links"><a href="#fall-4">So haben wir das gelöst<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Über Ihre Inhalte sprechen<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+        <div class="finder-erg e6" data-ansage="Üblicherweise mehrere Dutzend Anwendungsfälle – nach Wichtigkeit und Ertrag geordnet, als schriftliche Liste aus dem Workshop mit Ihrem Team.">
+          <p class="finder-ihre-wahl" aria-hidden="true">Ihre Wahl: <b>Weiß ich noch nicht genau</b></p>
+          <div class="finder-vorher"><span class="finder-etikett">Vorher</span><p>Es hakt an vielen Stellen – aber wo fängt man an, und was bringt am meisten?</p></div>
+          <div class="finder-nachher"><span class="finder-etikett">Nachher</span><p>Üblicherweise <strong class="finder-zahl">mehrere Dutzend</strong> Anwendungsfälle, nach Wichtigkeit und Ertrag geordnet – als schriftliche Liste aus dem Workshop mit Ihrem Team.</p>
+            <p class="finder-links"><a href="#schritte">So läuft der Workshop<span aria-hidden="true">&nbsp;→</span></a></p></div>
+          <div class="finder-aktion"><a class="btn-cta finder-cta" href="https://cal.melle.com.de" target="_blank" rel="noopener"><span class="chk" aria-hidden="true">✓</span> Wo fangen wir an? Sprechen wir<span class="sr-only"> (öffnet neues Fenster)</span></a>
+            <p class="finder-mikro">kostenlos · unverbindlich · direkt mit Mario Melle</p></div>
+        </div>
+    </div>
+    <p class="sr-only" role="status" id="finder-status"></p>
+  </div>
+</section>
+
+<section id="schritte" class="schritte-oben" tabindex="-1" aria-labelledby="schritte-h">
   <div class="wrap">
     <span class="kicker">So arbeiten wir zusammen</span>
-    <h2>In 3 Schritten von der Idee zur laufenden Lösung</h2>
+    <h2 id="schritte-h">In 3 Schritten von der Idee zur laufenden Lösung</h2>
     <div class="steps steps-3" data-sc-in data-sc-stagger="120">
       <div class="step"><div class="no">01</div><h3>15 Minuten kennenlernen</h3><p>Kostenlos und unverbindlich: Sie schildern, wo es hakt, ich sage Ihnen ehrlich, ob und wie KI dabei hilft.</p><a class="btn-sec" href="https://cal.melle.com.de" target="_blank" rel="noopener">Gespräch buchen →</a></div>
       <div class="step"><div class="no">02</div><h3>Workshop mit Ihrem Team</h3><p>Zwei Halbtage bei Ihnen vor Ort, mit bis zu 50 Mitarbeitern. Heraus kommen üblicherweise <strong>mehrere Dutzend Anwendungsfälle</strong>, priorisiert nach Wichtigkeit und Ertrag – als schriftliche Liste spätestens zehn Arbeitstage später. Sie wissen danach, womit Sie anfangen – und bekommen vorab ein schriftliches Angebot, das genau zu Ihrem Umfang passt.</p><p class="step-tipp"><b>Sie haben Ihre Anwendungsfälle schon?</b> Dann überspringen wir den Workshop und starten direkt mit Schritt 3.</p></div>
@@ -127,10 +199,10 @@
     <div class="karussell zeitleiste" data-auto="false" aria-roledescription="Zeitleiste" aria-label="Kundengeschichten">
       <button class="k-btn k-prev" type="button" aria-label="Vorherige Geschichten">‹</button>
       <div class="cases" tabindex="0">
-      <article class="case">
+      <article class="case" id="fall-1" tabindex="-1" aria-labelledby="fall-1-h">
         <div class="wann"><span>November 2024</span></div>
         <div class="tags"><span>Auftragsabwicklung</span><span>Industrie</span></div>
-        <h3>Lieferabrufe lesen sich jetzt selbst</h3>
+        <h3 id="fall-1-h">Lieferabrufe lesen sich jetzt selbst</h3>
         <p class="kunde">Zulieferer Kunststofftechnik · ca. 75 Mitarbeiter · Thüringen</p>
         <div id="video-lieferabrufe" class="video" data-name="lieferabrufe" data-video="https://iframe.mediadelivery.net/embed/353151/c8dec0b9-acfb-4e93-8067-efd3460256d1?autoplay=true&amp;loop=false&amp;muted=false&amp;preload=true&amp;responsive=true"><button type="button" class="video-start" aria-label="Video abspielen: Lieferabrufe: KI liest die E-Mails"><span class="play" aria-hidden="true">▶</span><span class="video-titel">Lieferabrufe: KI liest die E-Mails</span><small>Video startet beim Klick</small></button></div>
         <p class="case-ergebnis"><span>Ergebnis</span>26 Stunden pro Woche gespart</p>
@@ -143,10 +215,10 @@
         </div>
         <button type="button" class="tm-mehr case-knopf" aria-controls="geschichte-1" aria-expanded="false" hidden>Ganze Geschichte lesen</button>
       </article>
-      <article class="case">
+      <article class="case" id="fall-2" tabindex="-1" aria-labelledby="fall-2-h">
         <div class="wann"><span>Juni 2025</span></div>
         <div class="tags"><span>E-Commerce</span><span>Marketing</span></div>
-        <h3>1.000 SEO-Texte ohne Fleißarbeit</h3>
+        <h3 id="fall-2-h">1.000 SEO-Texte ohne Fleißarbeit</h3>
         <p class="kunde">Onlineshop der Marke Scheurich · betrieben von constancy (meine eigene Firma)</p>
         <div id="video-seo-automatisch" class="video" data-name="seo-automatisch" data-video="https://iframe.mediadelivery.net/embed/353151/af195e3d-5075-4831-b82d-e2189014fbee?autoplay=true&amp;loop=false&amp;muted=false&amp;preload=true&amp;responsive=true"><button type="button" class="video-start" aria-label="Video abspielen: SEO-Texte automatisch – in Sekunden"><span class="play" aria-hidden="true">▶</span><span class="video-titel">SEO-Texte automatisch – in Sekunden</span><small>Video startet beim Klick</small></button></div>
         <p class="video-copy">Gezeigte Marke: © Scheurich</p>
@@ -161,10 +233,10 @@
         </div>
         <button type="button" class="tm-mehr case-knopf" aria-controls="geschichte-2" aria-expanded="false" hidden>Ganze Geschichte lesen</button>
       </article>
-      <article class="case">
+      <article class="case" id="fall-3" tabindex="-1" aria-labelledby="fall-3-h">
         <div class="wann"><span>Oktober 2026</span><b>neu</b></div>
         <div class="tags"><span>Handwerk</span><span>Sprache</span><span>Demo</span></div>
-        <h3>Das Bautagebuch füllt sich per Sprache</h3>
+        <h3 id="fall-3-h">Das Bautagebuch füllt sich per Sprache</h3>
         <p class="kunde">Demo für Handwerksbetriebe · funktioniert mit jedem Formular</p>
         <div id="video-bautagebuch" class="video video-hoch" data-name="bautagebuch" data-video=""><button type="button" class="video-start" aria-label="Video abspielen: Demo Bautagebuch per Sprache"><span class="play" aria-hidden="true">▶</span><span class="video-titel">Demo: Bautagebuch per Sprache</span><small>Video startet beim Klick</small></button></div>
         <p class="video-copy mitte">Kunde, Name und Adresse im Video sind frei erfunden.</p>
@@ -178,10 +250,10 @@
         </div>
         <button type="button" class="tm-mehr case-knopf" aria-controls="geschichte-3" aria-expanded="false" hidden>Ganze Geschichte lesen</button>
       </article>
-      <article class="case">
+      <article class="case" id="fall-4" tabindex="-1" aria-labelledby="fall-4-h">
         <div class="wann"><span>August 2024</span></div>
         <div class="tags"><span>Vertrieb</span><span>Marketing</span></div>
-        <h3>Ein Workshop spricht jetzt mehrere Sprachen</h3>
+        <h3 id="fall-4-h">Ein Workshop spricht jetzt mehrere Sprachen</h3>
         <p class="kunde">Gesundheitsbranche · mittlerer dreistelliger Millionenumsatz</p>
         <div id="video-workshop-uebersetzung" class="video" data-name="workshop-uebersetzung" data-video="https://iframe.mediadelivery.net/embed/353151/9725501f-1ccf-4880-ba05-868c3c232c37?autoplay=true&amp;loop=false&amp;muted=false&amp;preload=true&amp;responsive=true"><button type="button" class="video-start" aria-label="Video abspielen: Workshop-Ansprache in mehreren Sprachen"><span class="play" aria-hidden="true">▶</span><span class="video-titel">Workshop-Ansprache in mehreren Sprachen</span><small>Video startet beim Klick</small></button></div>
         <p class="case-ergebnis"><span>Ergebnis</span>Botschaften erreichen internationale Zielgruppen in Sekunden statt Wochen.</p>
@@ -335,10 +407,10 @@
 </section>
 
 <!-- AUSZEICHNUNGEN + TESTIMONIALS -->
-<section class="anschluss" id="stimmen">
+<section class="anschluss" id="stimmen" tabindex="-1" aria-labelledby="stimmen-h">
   <div class="wrap">
     <span class="kicker">Auszeichnungen und Stimmen</span>
-    <h2>Was andere über die Zusammenarbeit sagen</h2>
+    <h2 id="stimmen-h">Was andere über die Zusammenarbeit sagen</h2>
     <div class="plaketten">
       <div class="plakette"><svg class="lorbeer" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 52C10 44 8 30 14 18"/><path d="M44 52c10-8 12-22 6-34"/></g><g fill="currentColor"><ellipse cx="12" cy="24" rx="3" ry="6" transform="rotate(-25 12 24)"/><ellipse cx="11" cy="34" rx="3" ry="6" transform="rotate(-50 11 34)"/><ellipse cx="15" cy="43" rx="3" ry="6" transform="rotate(-70 15 43)"/><ellipse cx="52" cy="24" rx="3" ry="6" transform="rotate(25 52 24)"/><ellipse cx="53" cy="34" rx="3" ry="6" transform="rotate(50 53 34)"/><ellipse cx="49" cy="43" rx="3" ry="6" transform="rotate(70 49 43)"/></g><path d="M32 22l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z" fill="currentColor"/></svg><b>KfW Award Gründen</b><small>KfW GründerChampion 2009 · synchronity</small></div>
       <div class="plakette"><svg class="lorbeer" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 52C10 44 8 30 14 18"/><path d="M44 52c10-8 12-22 6-34"/></g><g fill="currentColor"><ellipse cx="12" cy="24" rx="3" ry="6" transform="rotate(-25 12 24)"/><ellipse cx="11" cy="34" rx="3" ry="6" transform="rotate(-50 11 34)"/><ellipse cx="15" cy="43" rx="3" ry="6" transform="rotate(-70 15 43)"/><ellipse cx="52" cy="24" rx="3" ry="6" transform="rotate(25 52 24)"/><ellipse cx="53" cy="34" rx="3" ry="6" transform="rotate(50 53 34)"/><ellipse cx="49" cy="43" rx="3" ry="6" transform="rotate(70 49 43)"/></g><path d="M32 22l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z" fill="currentColor"/></svg><b>Gründerpreis Marktlücke</b><small>2007 · synchronity · Zeitungsgruppe Thüringen</small></div>
