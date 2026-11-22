@@ -1077,3 +1077,4 @@ section.abschluss{padding-block:clamp(96px,11vw,160px)}
 }
 #warum .denkweise-leiste{margin-top:40px}
 .sicher-kopf h2{text-wrap:wrap}
+@media(max-width:999px){ .sicher-kopf h2{text-wrap:balance} }
