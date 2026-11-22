@@ -979,7 +979,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 
 /* Kunden-Wolke (Schritt 186): Liste ohne Skript bzw. bei „weniger Bewegung“, sonst wechselndes Raster */
 .kunden-wolke{padding-bottom:0}
-.kunden-unter{color:var(--muted); margin:8px 0 22px}
+#kunden h2{margin-bottom:24px}
 .kunden-liste{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:baseline}
 .kunden-liste li{color:var(--ink); font-size:16px}
 .kunden-liste li.a{color:var(--teal); font-weight:800; font-size:20px}
