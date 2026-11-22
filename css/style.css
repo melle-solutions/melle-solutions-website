@@ -1017,3 +1017,31 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   .sicher-wrap .sicher-grid{grid-template-columns:repeat(2,1fr); margin-top:0}
 }
 
+/* 195 · Rhythmus 2: eigene Layout-Signaturen statt Kartenreihen */
+/* Schritte: Zeitstrahl ohne Kartenrahmen, Kopf zentriert */
+.schritte-oben .wrap > .kicker, .schritte-oben .wrap > h2{text-align:center; justify-content:center; margin-inline:auto}
+.schritte-oben .wrap > h2{max-width:24ch; margin-bottom:28px}
+.schritte-oben .step, .schritte-oben .step:hover{border:0; box-shadow:none; background:none; transform:none; padding:50px 10px 0}
+@media(min-width:761px){ .steps-3::before{border-top:2px solid var(--line); left:34px; right:34px} }
+.schritte-oben .step .no{left:10px}
+/* Kundengeschichten: Pfeile oben rechts neben der Überschrift */
+@media(min-width:861px){
+  #projekte .karussell .k-btn{top:-86px}
+  #projekte .karussell .k-prev{left:auto; right:54px}
+  #projekte .karussell .k-next{right:0}
+  #projekte h2{padding-right:120px}
+}
+/* Stimmen: Kopf zentriert, Auszeichnungen als schmale Leiste statt Karten */
+#stimmen .wrap > .kicker, #stimmen .wrap > h2{text-align:center; justify-content:center; margin-inline:auto}
+#stimmen .plaketten{display:flex; flex-wrap:wrap; justify-content:center; gap:0; margin:6px 0 34px}
+#stimmen .plakette{flex:1 1 0; min-width:200px; background:none; border:0; border-left:1px solid var(--line); border-radius:0; box-shadow:none; padding:4px 18px; gap:4px}
+#stimmen .plakette:first-child{border-left:0}
+#stimmen .plakette .lorbeer{width:34px; height:34px}
+#stimmen .plakette b{font-size:15px}
+@media(max-width:860px){ #stimmen .plakette{flex:1 1 45%; min-width:0; border-left:0; padding:10px 8px} }
+@media(max-width:760px){
+  .schritte-oben .steps-3{row-gap:34px; margin-top:20px}
+  .schritte-oben .step{padding:62px 0 0}
+  .schritte-oben .step .no{top:0; left:0}
+}
+
