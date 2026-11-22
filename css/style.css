@@ -1079,15 +1079,15 @@ section.abschluss{padding-block:clamp(96px,11vw,160px)}
 .sicher-kopf h2{text-wrap:wrap}
 @media(max-width:999px){ .sicher-kopf h2{text-wrap:balance} }
 
-/* 199 · Kundenwolke als typografische Reihe: alle Namen gleich im Fließtext, Punkte dazwischen;
-   eine Lime-Markierung wandert (keine Größen-/Gewichtsänderung, damit nichts umbricht) */
-#kunden .kunden-liste{display:block; font-size:clamp(19px,1.9vw,24px); line-height:1.75; color:var(--teal); font-weight:700; max-width:1080px}
-#kunden .kunden-liste li{display:inline; color:inherit; font-size:inherit; font-weight:inherit; white-space:nowrap}
-#kunden .kunden-liste li.a{font-size:inherit; font-weight:inherit; color:inherit}
-#kunden .kunden-liste li:not(:last-child)::after{content:"·"; color:var(--lime); margin:0 .55em; font-weight:400}
-#kunden .kunden-liste li > span{background:linear-gradient(transparent 62%, rgba(150,255,56,0) 0); transition:background .6s ease, color .6s ease}
-#kunden .kunden-liste li.hell > span{background:linear-gradient(transparent 62%, rgba(150,255,56,.55) 0)}
-#kunden .kunden-liste.gedimmt li > span{color:#5f7772}
-#kunden .kunden-liste.gedimmt li.hell > span{color:var(--teal)}
-@media (max-width:760px){ #kunden .kunden-liste{font-size:17px; line-height:1.75} #kunden .kunden-liste li:not(:last-child)::after{margin:0 .4em} }
+/* 200 · Kundenraster: einheitliche Kacheln, Name gleitet beim Wechsel; A-Kunden nur über die Schrift betont */
+.kunden-feld, .kunden-feld.a{background:#fff; border:1px solid var(--line); border-radius:10px; box-shadow:none;
+  color:var(--ink); font-weight:600; overflow:hidden}
+.kunden-feld.a{color:var(--teal); font-weight:800}
+.kunden-feld > span{display:block; transition:transform .45s cubic-bezier(.2,.7,.2,1), opacity .45s ease}
+.kunden-raster > .kunden-feld.weg{opacity:1}
+.kunden-feld.weg > span{transform:translateY(-110%); opacity:0}
+.kunden-feld.neu > span{transform:translateY(110%); opacity:0; transition:none}
+.kunden-an .kunden-raster{grid-auto-rows:68px}
+@media (max-width:760px){ .kunden-an .kunden-raster{grid-auto-rows:72px} }
+@media (prefers-reduced-motion: reduce){ .kunden-feld > span{transition:none} }
 
