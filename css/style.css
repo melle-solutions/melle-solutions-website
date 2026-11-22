@@ -990,13 +990,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .kunden-liste li{color:var(--ink); font-size:16px}
 .kunden-liste li.a{color:var(--teal); font-weight:800; font-size:20px}
 .kunden-raster{display:none}
-.kunden-an .kunden-raster{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px}
+.kunden-an .kunden-raster{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:64px; gap:10px}
 .kunden-an .kunden-liste{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
-.kunden-feld{min-height:64px; border-radius:8px; background:var(--paper-2); display:flex; align-items:center; justify-content:center;
+.kunden-feld{min-height:0; border-radius:8px; background:var(--paper-2); display:flex; align-items:center; justify-content:center;
   text-align:center; padding:8px 12px; color:var(--ink); font-weight:600; font-size:16px; line-height:1.25; transition:opacity .5s ease;
   hyphens:manual; overflow-wrap:break-word; text-wrap:balance}
 .kunden-feld.a{background:#fff; border:1px solid var(--line); color:var(--teal); font-weight:800; font-size:17px;
   box-shadow:inset 0 -2px 0 var(--lime)}
 .kunden-raster > .kunden-feld.weg{opacity:0}
 .js .kunden-raster > .kunden-feld{transition:opacity .5s ease, transform .62s cubic-bezier(.2,.7,.2,1)}
-@media (max-width:760px){ .kunden-an .kunden-raster{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px} .kunden-feld{min-height:66px; font-size:14px; padding:8px} .kunden-feld.a{font-size:15px} }
+@media (max-width:760px){ .kunden-an .kunden-raster{grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:72px; gap:10px} .kunden-feld{font-size:14px; padding:8px} .kunden-feld.a{font-size:15px} }
