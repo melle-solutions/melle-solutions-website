@@ -1045,3 +1045,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   .schritte-oben .step .no{top:0; left:0}
 }
 
+/* 196 · Rhythmus 3: Ruhepunkte und Maßstabswechsel */
+#warum .gegruendet{border-block:1px solid var(--line); padding-block:28px 30px; margin-top:44px}
+section.abschluss{padding-block:clamp(96px,11vw,160px)}
+.abschluss h2{font-size:clamp(36px,5.2vw,62px); line-height:1.08; max-width:21ch; margin-inline:auto}
+.abschluss .haltung{font-size:clamp(20px,2.2vw,26px); margin-top:30px}
+@media (prefers-reduced-motion: reduce){ .abschluss .haltung[data-sc-in]{opacity:1; transform:none} }
+
