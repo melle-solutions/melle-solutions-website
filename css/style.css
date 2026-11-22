@@ -976,3 +976,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 @media(max-width:700px){
   #warum .denkweise-leiste{grid-template-columns:1fr; gap:8px; padding:22px 22px 24px}
 }
+
+/* Kunden-Wolke (Schritt 186): Liste ohne Skript bzw. bei „weniger Bewegung“, sonst wechselndes Raster */
+.kunden-wolke{padding-bottom:0}
+.kunden-unter{color:var(--muted); margin:8px 0 22px}
+.kunden-liste{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:baseline}
+.kunden-liste li{color:var(--ink); font-size:16px}
+.kunden-liste li.a{color:var(--teal); font-weight:800; font-size:20px}
+.kunden-raster{display:none}
+.kunden-an .kunden-raster{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px}
+.kunden-an .kunden-liste{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.kunden-feld{min-height:74px; border-radius:10px; background:var(--paper-2); display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:8px 12px; color:var(--teal); font-weight:700; font-size:16px; line-height:1.25; transition:opacity .5s ease}
+.kunden-feld.a{background:#e9fbd8; font-weight:800; font-size:17px; box-shadow:inset 0 -3px 0 var(--lime)}
+.kunden-feld.weg{opacity:0}
+.kunden-pause{margin-top:14px; background:none; border:1px solid var(--line); border-radius:999px; padding:6px 14px;
+  font:inherit; font-size:13px; font-weight:700; color:var(--muted); cursor:pointer}
+.kunden-pause:hover{color:var(--teal); border-color:var(--teal)}
+.kunden-pause:focus-visible{outline:2px solid var(--teal); outline-offset:2px}
+@media (max-width:760px){ .kunden-an .kunden-raster{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px} .kunden-feld{min-height:62px; font-size:15px} }
