@@ -1,55 +1,29 @@
-// Kunden-Wolke (#kunden): wechselndes Raster aus der Namensliste. Ohne Skript oder bei
-// „weniger Bewegung“ bleibt die ruhige Liste stehen. Pausiert außer Sicht und solange die Maus darauf steht.
-// A-Kunden sitzen auf festen Plätzen im Schachbrett; jeder Platz tauscht nur innerhalb seiner Gruppe.
+// Kunden-Wolke (#kunden): alle Namen stehen als Fließtext mit Punkten. Eine Lime-Markierung wandert
+// über einzelne Namen (immer drei zugleich), damit der Abschnitt lebt, ohne dass Zeilen umbrechen.
+// Ohne Skript oder bei „weniger Bewegung“ bleibt die ruhige Liste ohne Markierung.
+// Pausiert außer Sicht und solange die Maus darauf steht.
 (function () {
   var sek = document.getElementById('kunden');
   if (!sek) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var raster = sek.querySelector('.kunden-raster');
-  var namen = Array.prototype.map.call(sek.querySelectorAll('.kunden-liste li'), function (li) {
-    return { n: li.textContent, a: li.classList.contains('a') };
-  });
-  var handy = window.matchMedia('(max-width:760px)').matches;
-  var felderZahl = handy ? 8 : 12;
-  var aPlaetze = handy ? [0, 3, 4, 7] : [0, 2, 5, 7, 8, 10];
-  if (namen.length <= felderZahl) return;
+  var liste = sek.querySelector('.kunden-liste');
+  var li = Array.prototype.slice.call(liste.querySelectorAll('li'));
+  if (li.length < 6) return;
+  // Name in ein <span> legen, damit die Markierung nur den Namen trifft, nicht den Punkt danach
+  li.forEach(function (x) { var s = document.createElement('span'); s.textContent = x.textContent; x.textContent = ''; x.appendChild(s); });
+  liste.classList.add('gedimmt');
 
-  function mischen(l) {
-    for (var i = l.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = l[i]; l[i] = l[j]; l[j] = t; }
-    return l;
-  }
-  var warteA = mischen(namen.filter(function (x) { return x.a; }));
-  var warteB = mischen(namen.filter(function (x) { return !x.a; }));
-  var istA = [], sicht = [];
-  for (var k = 0; k < felderZahl; k++) {
-    istA[k] = aPlaetze.indexOf(k) >= 0 && warteA.length > 0;
-    sicht[k] = istA[k] ? warteA.shift() : warteB.shift();
-    var d = document.createElement('div');
-    d.className = 'kunden-feld' + (istA[k] ? ' a' : '');
-    d.textContent = sicht[k].n;
-    raster.appendChild(d);
-  }
-  sek.classList.add('kunden-an');
-
-  var sichtbar = false, maus = false, zuletzt = -1;
-  function tausche() {
+  var an = [], sichtbar = false, maus = false, zuletzt = -1;
+  function schritt() {
     if (!sichtbar || maus || document.hidden) return;
-    var k; do { k = Math.floor(Math.random() * felderZahl); } while (k === zuletzt);
-    var warte = istA[k] ? warteA : warteB;
-    if (!warte.length) return;
-    zuletzt = k;
-    var feld = raster.children[k];
-    feld.classList.add('weg');
-    setTimeout(function () {
-      warte.push(sicht[k]); sicht[k] = warte.shift();
-      feld.textContent = sicht[k].n; feld.style.transitionDelay = '';
-      feld.classList.remove('weg'); // sc-in und a bleiben: Scrollcraft blendet über sc-in ein
-    }, 500);
+    if (an.length >= 3) li[an.shift()].classList.remove('hell');
+    var k; do { k = Math.floor(Math.random() * li.length); } while (k === zuletzt || an.indexOf(k) >= 0);
+    zuletzt = k; an.push(k); li[k].classList.add('hell');
   }
-  setInterval(tausche, 2000);
+  setInterval(schritt, 1400);
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (e) { sichtbar = e[0].isIntersecting; }, { threshold: 0.2 }).observe(raster);
+    new IntersectionObserver(function (e) { sichtbar = e[0].isIntersecting; }, { threshold: 0.2 }).observe(liste);
   } else { sichtbar = true; }
-  raster.addEventListener('mouseenter', function () { maus = true; });
-  raster.addEventListener('mouseleave', function () { maus = false; });
+  liste.addEventListener('mouseenter', function () { maus = true; });
+  liste.addEventListener('mouseleave', function () { maus = false; });
 })();
