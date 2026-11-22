@@ -29,7 +29,9 @@
     feld.classList.add('weg');
     setTimeout(function () {
       warte.push(sicht[k]); sicht[k] = warte.shift();
-      feld.textContent = sicht[k].n; feld.className = 'kunden-feld' + (sicht[k].a ? ' a' : '');
+      feld.textContent = sicht[k].n; feld.style.transitionDelay = '';
+      // sc-in behalten: Scrollcraft blendet die Kacheln über diese Klasse ein
+      feld.className = 'kunden-feld sc-in' + (sicht[k].a ? ' a' : '');
     }, 500);
   }
   setInterval(tausche, 2000);
