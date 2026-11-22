@@ -1,10 +1,10 @@
 // Kunden-Wolke (#kunden): wechselndes Raster aus der Namensliste. Ohne Skript oder bei
-// „weniger Bewegung“ bleibt die ruhige Liste stehen. Pausiert außer Sicht, bei Maus/Fokus und per Knopf.
+// „weniger Bewegung“ bleibt die ruhige Liste stehen. Pausiert außer Sicht und solange die Maus darauf steht.
 (function () {
   var sek = document.getElementById('kunden');
   if (!sek) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var raster = sek.querySelector('.kunden-raster'), knopf = sek.querySelector('.kunden-pause');
+  var raster = sek.querySelector('.kunden-raster');
   var namen = Array.prototype.map.call(sek.querySelectorAll('.kunden-liste li'), function (li) {
     return { n: li.textContent, a: li.classList.contains('a') };
   });
@@ -20,10 +20,9 @@
     var d = document.createElement('div'); d.className = 'kunden-feld' + (x.a ? ' a' : ''); d.textContent = x.n; raster.appendChild(d);
   });
   sek.classList.add('kunden-an');
-  knopf.hidden = false;
-  var sichtbar = false, maus = false, angehalten = false, zuletzt = -1;
+  var sichtbar = false, maus = false, zuletzt = -1;
   function tausche() {
-    if (!sichtbar || maus || angehalten || document.hidden) return;
+    if (!sichtbar || maus || document.hidden) return;
     var k; do { k = Math.floor(Math.random() * felderZahl); } while (k === zuletzt);
     zuletzt = k;
     var feld = raster.children[k];
@@ -39,7 +38,4 @@
   } else { sichtbar = true; }
   raster.addEventListener('mouseenter', function () { maus = true; });
   raster.addEventListener('mouseleave', function () { maus = false; });
-  knopf.addEventListener('click', function () {
-    angehalten = !angehalten; knopf.textContent = angehalten ? 'Weiter wechseln' : 'Anhalten';
-  });
 })();
