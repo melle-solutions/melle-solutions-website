@@ -1185,4 +1185,6 @@ html{scroll-padding-top:92px}
 .finder-nachher .finder-zahl{line-height:1.2; vertical-align:baseline}
 .finder-ihre-wahl{display:none}
 @media (max-width:760px){ .finder-ihre-wahl{display:block; grid-column:1 / -1; margin:0 0 2px; font-size:13px; color:var(--muted)} .finder-ihre-wahl b{color:var(--teal)} }
+/* 211 · Coach-Haltung als Schlusssatz der Coach-Karte */
+.coach-haltung{margin:18px 0 0; padding:2px 0 2px 16px; border-left:3px solid var(--lime); color:var(--teal); font-weight:700; font-size:16.5px; line-height:1.5}
 
