@@ -5,13 +5,14 @@ Beitragsseite, die Übersicht unter `/posts/` und den RSS-Feed (`/posts/feed.xml
 
 ## 1. Datei anlegen
 Name: `_posts/JJJJ-MM-TT-kurzer-titel.md` – zum Beispiel `_posts/2026-11-20-ki-im-einkauf.md`.
-Der Dateiname bestimmt die Adresse: `www.melle.com.de/ki-im-einkauf/` (ohne Datum).
+Die Adresse legt `permalink:` im Vorspann fest, z. B. `www.melle.com.de/ki-im-einkauf/` – ohne diese Zeile entsteht `/2026/11/20/ki-im-einkauf.html`. Uhrzeit nicht in der Zukunft wählen, sonst baut Jekyll den Beitrag noch nicht.
 
 ## 2. Oben den Vorspann, darunter der Text
 ```markdown
 ---
 title: "KI im Einkauf: drei schnelle Gewinne"
-date: 2026-11-20 09:00:00
+date: 2026-11-20 09:00:00 +0100
+permalink: "/ki-im-einkauf/"
 image: "/assets/blog/ki-im-einkauf/titelbild.jpg"
 excerpt: "Ein Satz, der in der Übersicht und bei Google erscheint."
 ---
@@ -24,7 +25,7 @@ Hier beginnt der Text. Ein Absatz ist einfach Text, dazwischen eine Leerzeile.
 ```
 - **Titelbild** (optional): Bild nach `assets/blog/<kurzer-titel>/` legen, Pfad bei `image:` eintragen.
   Ohne `image:` zeigt die Übersicht ein Platzhalter-Symbol.
-- **Bild im Text**: `![Beschreibung](/assets/blog/<kurzer-titel>/bild.jpg)`
+- **Bild im Text**: `![Beschreibung](../../../../../../assets/blog/<kurzer-titel>/bild.jpg)`
 - **Video** (Datei auf go.melle.com.de): `<video controls preload="none" src="https://go.melle.com.de/melle-solutions-website-videos/name.mp4"></video>`
 
 ## 3. Veröffentlichen
