@@ -1190,3 +1190,7 @@ html{scroll-padding-top:92px}
 .beirat-haltung{max-width:62ch; margin:6px 0 26px; font-size:17.5px}
 /* 214: hervorgehobene Zahl im Finder bricht nie um – sonst zerreißt die Markierung über zwei Zeilen */
 .finder-nachher .finder-zahl{display:inline-block; white-space:nowrap; line-height:1.15; font-size:clamp(20px,1.9vw,24px); margin:2px 0}
+/* 216: Netzwerk-Link links unter dem Leitsatz */
+footer .fuss-netzwerk{margin-top:14px}
+footer .fuss-netzwerk a{color:#dbe7e4; text-decoration:none; border-bottom:1px solid transparent}
+footer .fuss-netzwerk a:hover, footer .fuss-netzwerk a:focus-visible{color:var(--lime); border-bottom-color:var(--lime)}
