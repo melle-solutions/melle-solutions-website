@@ -7,6 +7,9 @@ klasse: rechtstext
 
 # Allgemeine Geschäftsbedingungen der Melle Solutions GmbH für Training, Coaching und Beratung
 
+**Stand September 2026.** Für Verträge, die bis zum 11. September 2026 geschlossen wurden, gilt
+die [Fassung April 2026](/agb/april-2026/).
+
 ## § 1 Geltungsbereich
 
 1. Diese Allgemeinen Geschäftsbedingungen gelten für sämtliche Angebote, Verträge und Leistungen des Auftragnehmers im Bereich Training, Coaching und Beratung.
